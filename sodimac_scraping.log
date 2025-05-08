@@ -1,0 +1,64 @@
+08/05/2025 13:03:20 - INFO - Iniciando scraping para: https://www.sodimac.com.br/sodimac-br/category/cat20001/Ferramentas/
+08/05/2025 13:03:20 - INFO - Processando página 1
+08/05/2025 13:03:20 - INFO - ====== WebDriver manager ======
+08/05/2025 13:03:21 - INFO - Get LATEST chromedriver version for google-chrome
+08/05/2025 13:03:21 - INFO - Get LATEST chromedriver version for google-chrome
+08/05/2025 13:03:21 - INFO - Driver [C:\Users\andrew.reis\.wdm\drivers\chromedriver\win64\135.0.7049.114\chromedriver-win32/chromedriver.exe] found in cache
+08/05/2025 13:03:56 - ERROR - Erro no Selenium: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00CCD363+60275]
+	GetHandleVerifier [0x00CCD3A4+60340]
+	(No symbol) [0x00B006F3]
+	(No symbol) [0x00B48690]
+	(No symbol) [0x00B48A2B]
+	(No symbol) [0x00B90EE2]
+	(No symbol) [0x00B6D0D4]
+	(No symbol) [0x00B8E6EB]
+	(No symbol) [0x00B6CE86]
+	(No symbol) [0x00B3C623]
+	(No symbol) [0x00B3D474]
+	GetHandleVerifier [0x00F18FE3+2467827]
+	GetHandleVerifier [0x00F145E6+2448886]
+	GetHandleVerifier [0x00F2F80C+2560028]
+	GetHandleVerifier [0x00CE3DF5+153093]
+	GetHandleVerifier [0x00CEA3BD+179149]
+	GetHandleVerifier [0x00CD4BB8+91080]
+	GetHandleVerifier [0x00CD4D60+91504]
+	GetHandleVerifier [0x00CBFA10+4640]
+	BaseThreadInitThunk [0x75F77BA9+25]
+	RtlInitializeExceptionChain [0x774CC28B+107]
+	RtlClearBits [0x774CC20F+191]
+
+08/05/2025 13:03:58 - WARNING - Falha ao acessar página 1
+08/05/2025 13:26:21 - INFO - Iniciando scraping para: https://www.sodimac.com.br/sodimac-br/category/cat20001/Ferramentas/
+08/05/2025 13:26:21 - INFO - Processando página 1
+08/05/2025 13:26:21 - INFO - ====== WebDriver manager ======
+08/05/2025 13:26:22 - INFO - Get LATEST chromedriver version for google-chrome
+08/05/2025 13:26:22 - INFO - Get LATEST chromedriver version for google-chrome
+08/05/2025 13:26:22 - INFO - Driver [C:\Users\andrew.reis\.wdm\drivers\chromedriver\win64\135.0.7049.114\chromedriver-win32/chromedriver.exe] found in cache
+08/05/2025 13:26:56 - ERROR - Erro no Selenium: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00CCD363+60275]
+	GetHandleVerifier [0x00CCD3A4+60340]
+	(No symbol) [0x00B006F3]
+	(No symbol) [0x00B48690]
+	(No symbol) [0x00B48A2B]
+	(No symbol) [0x00B90EE2]
+	(No symbol) [0x00B6D0D4]
+	(No symbol) [0x00B8E6EB]
+	(No symbol) [0x00B6CE86]
+	(No symbol) [0x00B3C623]
+	(No symbol) [0x00B3D474]
+	GetHandleVerifier [0x00F18FE3+2467827]
+	GetHandleVerifier [0x00F145E6+2448886]
+	GetHandleVerifier [0x00F2F80C+2560028]
+	GetHandleVerifier [0x00CE3DF5+153093]
+	GetHandleVerifier [0x00CEA3BD+179149]
+	GetHandleVerifier [0x00CD4BB8+91080]
+	GetHandleVerifier [0x00CD4D60+91504]
+	GetHandleVerifier [0x00CBFA10+4640]
+	BaseThreadInitThunk [0x75F77BA9+25]
+	RtlInitializeExceptionChain [0x774CC28B+107]
+	RtlClearBits [0x774CC20F+191]
+
+08/05/2025 13:26:58 - WARNING - Falha ao acessar página 1
