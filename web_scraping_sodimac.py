@@ -40,51 +40,54 @@ def setup_driver():
     
     return driver
 
-def scrape_products():
+def scrape_product_details(url):
     driver = setup_driver()
     try:
-        url = "https://www.sodimac.com.br/sodimac-br/category/cat20001/Ferramentas/"
-        logging.info(f"Acessando: {url}")
+        logging.info(f"Acessando página do produto: {url}")
         driver.get(url)
         
-        # Espera explícita para os produtos carregarem
+        # Espera explícita para a página carregar
         WebDriverWait(driver, 20).until(
-            EC.presence_of_element_located((By.CSS_SELECTOR, "div[data-testid='product-card']"))
+            EC.presence_of_element_located((By.CSS_SELECTOR, "h1[data-testid='product-name']"))
         )
         
-        # Scroll para carregar todos os produtos
-        last_height = driver.execute_script("return document.body.scrollHeight")
-        while True:
-            driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-            time.sleep(3)
-            new_height = driver.execute_script("return document.body.scrollHeight")
-            if new_height == last_height:
-                break
-            last_height = new_height
+        # Extrai informações do produto
+        product_info = {
+            'name': driver.find_element(By.CSS_SELECTOR, "h1[data-testid='product-name']").text,
+            'current_price': driver.find_element(By.CSS_SELECTOR, "span[data-testid='price-value']").text,
+            'original_price': driver.find_element(By.CSS_SELECTOR, "span[data-testid='price-original']").text,
+            'discount': driver.find_element(By.CSS_SELECTOR, "span[data-testid='price-discount']").text,
+            'installments': driver.find_element(By.CSS_SELECTOR, "span[data-testid='price-installment']").text,
+            'description': driver.find_element(By.CSS_SELECTOR, "div[data-testid='product-description']").text if driver.find_elements(By.CSS_SELECTOR, "div[data-testid='product-description']") else "N/A"
+        }
         
-        # Coleta os produtos
-        products = driver.find_elements(By.CSS_SELECTOR, "div[data-testid='product-card']")
-        logging.info(f"Encontrados {len(products)} produtos")
-        
-        # Extrai informações básicas
-        for product in products[:5]:  # Mostra apenas os 5 primeiros para teste
-            try:
-                name = product.find_element(By.CSS_SELECTOR, "[data-testid='product-title']").text
-                price = product.find_element(By.CSS_SELECTOR, "[data-testid='price-value']").text
-                logging.info(f"Produto: {name} | Preço: {price}")
-            except Exception as e:
-                logging.warning(f"Erro ao extrair produto: {str(e)}")
-        
-        return len(products)
+        logging.info(f"Informações do produto coletadas: {product_info}")
+        return product_info
         
     except Exception as e:
-        logging.error(f"Erro durante o scraping: {str(e)}")
-        return 0
+        logging.error(f"Erro ao coletar detalhes do produto: {str(e)}")
+        return None
     finally:
         driver.quit()
         logging.info("Navegador finalizado")
 
 if __name__ == "__main__":
     logging.info("=== INÍCIO DO SCRAPING ===")
-    total_products = scrape_products()
-    logging.info(f"=== FIM DO SCRAPING | Total de produtos: {total_products} ===")
+    
+    # URL de exemplo da churrasqueira (da segunda imagem)
+    product_url = "https://www.sodimac.com.br/sodimac-br/product/768155/churrasqueira-a-gas-com-3-queimadores-e-1-queimador-lateral-cinza/768155/?cid=prd_hom_36009"
+    
+    product_data = scrape_product_details(product_url)
+    
+    if product_data:
+        logging.info("\n=== DADOS DO PRODUTO ===")
+        logging.info(f"Nome: {product_data['name']}")
+        logging.info(f"Preço atual: {product_data['current_price']}")
+        logging.info(f"Preço original: {product_data['original_price']}")
+        logging.info(f"Desconto: {product_data['discount']}")
+        logging.info(f"Parcelamento: {product_data['installments']}")
+        logging.info(f"Descrição: {product_data['description'][:100]}...")  # Mostra apenas os 100 primeiros caracteres
+    else:
+        logging.error("Não foi possível coletar os dados do produto")
+    
+    logging.info("=== FIM DO SCRAPING ===")
