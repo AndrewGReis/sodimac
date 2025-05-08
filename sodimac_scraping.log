@@ -94,3 +94,181 @@ Stacktrace:
 	RtlClearBits [0x774CC20F+191]
 
 08/05/2025 13:42:08 - WARNING - Falha ao acessar página 1
+08/05/2025 13:48:17 - INFO - Iniciando scraping para: https://www.sodimac.com.br/sodimac-br/category/cat20001/Ferramentas/
+08/05/2025 13:48:17 - INFO - Processando página 1
+08/05/2025 13:48:17 - INFO - ====== WebDriver manager ======
+08/05/2025 13:48:18 - INFO - Get LATEST chromedriver version for google-chrome
+08/05/2025 13:48:18 - INFO - Get LATEST chromedriver version for google-chrome
+08/05/2025 13:48:18 - INFO - Driver [C:\Users\andrew.reis\.wdm\drivers\chromedriver\win64\135.0.7049.114\chromedriver-win32/chromedriver.exe] found in cache
+08/05/2025 13:48:53 - ERROR - Erro no Selenium: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00CCD363+60275]
+	GetHandleVerifier [0x00CCD3A4+60340]
+	(No symbol) [0x00B006F3]
+	(No symbol) [0x00B48690]
+	(No symbol) [0x00B48A2B]
+	(No symbol) [0x00B90EE2]
+	(No symbol) [0x00B6D0D4]
+	(No symbol) [0x00B8E6EB]
+	(No symbol) [0x00B6CE86]
+	(No symbol) [0x00B3C623]
+	(No symbol) [0x00B3D474]
+	GetHandleVerifier [0x00F18FE3+2467827]
+	GetHandleVerifier [0x00F145E6+2448886]
+	GetHandleVerifier [0x00F2F80C+2560028]
+	GetHandleVerifier [0x00CE3DF5+153093]
+	GetHandleVerifier [0x00CEA3BD+179149]
+	GetHandleVerifier [0x00CD4BB8+91080]
+	GetHandleVerifier [0x00CD4D60+91504]
+	GetHandleVerifier [0x00CBFA10+4640]
+	BaseThreadInitThunk [0x75F77BA9+25]
+	RtlInitializeExceptionChain [0x774CC28B+107]
+	RtlClearBits [0x774CC20F+191]
+
+08/05/2025 13:48:55 - WARNING - Falha ao acessar página 1
+08/05/2025 13:50:24 - INFO - Iniciando scraping para: https://www.sodimac.com.br/sodimac-br/category/cat20001/Ferramentas/
+08/05/2025 13:50:24 - INFO - Processando página 1
+08/05/2025 13:50:24 - INFO - ====== WebDriver manager ======
+08/05/2025 13:50:25 - INFO - Get LATEST chromedriver version for google-chrome
+08/05/2025 13:50:25 - INFO - Get LATEST chromedriver version for google-chrome
+08/05/2025 13:50:25 - INFO - Driver [C:\Users\andrew.reis\.wdm\drivers\chromedriver\win64\135.0.7049.114\chromedriver-win32/chromedriver.exe] found in cache
+08/05/2025 13:50:58 - ERROR - Erro no Selenium: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00CCD363+60275]
+	GetHandleVerifier [0x00CCD3A4+60340]
+	(No symbol) [0x00B006F3]
+	(No symbol) [0x00B48690]
+	(No symbol) [0x00B48A2B]
+	(No symbol) [0x00B90EE2]
+	(No symbol) [0x00B6D0D4]
+	(No symbol) [0x00B8E6EB]
+	(No symbol) [0x00B6CE86]
+	(No symbol) [0x00B3C623]
+	(No symbol) [0x00B3D474]
+	GetHandleVerifier [0x00F18FE3+2467827]
+	GetHandleVerifier [0x00F145E6+2448886]
+	GetHandleVerifier [0x00F2F80C+2560028]
+	GetHandleVerifier [0x00CE3DF5+153093]
+	GetHandleVerifier [0x00CEA3BD+179149]
+	GetHandleVerifier [0x00CD4BB8+91080]
+	GetHandleVerifier [0x00CD4D60+91504]
+	GetHandleVerifier [0x00CBFA10+4640]
+	BaseThreadInitThunk [0x75F77BA9+25]
+	RtlInitializeExceptionChain [0x774CC28B+107]
+	RtlClearBits [0x774CC20F+191]
+
+08/05/2025 13:51:01 - WARNING - Falha ao acessar página 1
+08/05/2025 13:52:42 - INFO - Iniciando scraping para: https://www.sodimac.com.br/sodimac-br/category/cat20001/Ferramentas/
+08/05/2025 13:52:42 - INFO - Processando página 1
+08/05/2025 13:52:47 - WARNING - Possível bloqueio detectado na página
+08/05/2025 13:52:47 - WARNING - Falha ao acessar página 1
+08/05/2025 13:54:27 - INFO - Iniciando scraping para: https://www.sodimac.com.br/sodimac-br/category/cat20001/Ferramentas/
+08/05/2025 13:54:27 - INFO - Processando página 1
+08/05/2025 13:54:34 - WARNING - Possível bloqueio detectado na página
+08/05/2025 13:54:34 - WARNING - Falha ao acessar página 1
+2025-05-08 14:29:24,632 - INFO - ====== WebDriver manager ======
+2025-05-08 14:29:25,728 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-08 14:29:25,780 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-08 14:29:25,803 - INFO - Driver [C:\Users\andrew.reis\.wdm\drivers\chromedriver\win64\135.0.7049.114\chromedriver-win32/chromedriver.exe] found in cache
+2025-05-08 14:29:27,139 - INFO - Coletando links dos produtos...
+2025-05-08 14:29:39,667 - ERROR - Erro no processo principal: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00CCD363+60275]
+	GetHandleVerifier [0x00CCD3A4+60340]
+	(No symbol) [0x00B0056E]
+	(No symbol) [0x00B3B8E8]
+	(No symbol) [0x00B6CF46]
+	(No symbol) [0x00B68A18]
+	(No symbol) [0x00B67F96]
+	(No symbol) [0x00AD36E5]
+	(No symbol) [0x00AD3C3E]
+	(No symbol) [0x00AD40CD]
+	GetHandleVerifier [0x00F18FE3+2467827]
+	GetHandleVerifier [0x00F145E6+2448886]
+	GetHandleVerifier [0x00F2F80C+2560028]
+	GetHandleVerifier [0x00CE3DF5+153093]
+	GetHandleVerifier [0x00CEA3BD+179149]
+	(No symbol) [0x00AD33B0]
+	(No symbol) [0x00AD2BC3]
+	GetHandleVerifier [0x0103DFBC+3667916]
+	BaseThreadInitThunk [0x75F77BA9+25]
+	RtlInitializeExceptionChain [0x774CC28B+107]
+	RtlClearBits [0x774CC20F+191]
+
+2025-05-08 14:29:41,691 - INFO - Navegador fechado
+2025-05-08 14:30:08,941 - INFO - ====== WebDriver manager ======
+2025-05-08 14:30:10,067 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-08 14:30:10,099 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-08 14:30:10,130 - INFO - Driver [C:\Users\andrew.reis\.wdm\drivers\chromedriver\win64\135.0.7049.114\chromedriver-win32/chromedriver.exe] found in cache
+2025-05-08 14:30:11,429 - INFO - Coletando links dos produtos...
+2025-05-08 14:30:26,043 - ERROR - Erro no processo principal: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=135.0.7049.115)
+Stacktrace:
+	GetHandleVerifier [0x00CCD363+60275]
+	GetHandleVerifier [0x00CCD3A4+60340]
+	(No symbol) [0x00B006F3]
+	(No symbol) [0x00AEFF20]
+	(No symbol) [0x00B0DDA2]
+	(No symbol) [0x00B73D2F]
+	(No symbol) [0x00B8DFE9]
+	(No symbol) [0x00B6CE86]
+	(No symbol) [0x00B3C623]
+	(No symbol) [0x00B3D474]
+	GetHandleVerifier [0x00F18FE3+2467827]
+	GetHandleVerifier [0x00F145E6+2448886]
+	GetHandleVerifier [0x00F2F80C+2560028]
+	GetHandleVerifier [0x00CE3DF5+153093]
+	GetHandleVerifier [0x00CEA3BD+179149]
+	GetHandleVerifier [0x00CD4BB8+91080]
+	GetHandleVerifier [0x00CD4D60+91504]
+	GetHandleVerifier [0x00CBFA10+4640]
+	BaseThreadInitThunk [0x75F77BA9+25]
+	RtlInitializeExceptionChain [0x774CC28B+107]
+	RtlClearBits [0x774CC20F+191]
+
+2025-05-08 14:30:28,133 - INFO - Navegador fechado
+2025-05-08 14:38:48,089 - INFO - === INICIANDO SCRAPING AUTOMATIZADO ===
+2025-05-08 14:38:48,090 - INFO - ====== WebDriver manager ======
+2025-05-08 14:38:49,157 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-08 14:38:49,211 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-08 14:38:49,234 - INFO - Driver [C:\Users\andrew.reis\.wdm\drivers\chromedriver\win64\135.0.7049.114\chromedriver-win32/chromedriver.exe] found in cache
+2025-05-08 14:38:50,438 - INFO - Navegando para a página de categoria...
+2025-05-08 14:39:03,472 - INFO - Nenhum popup de cookies encontrado
+2025-05-08 14:39:03,473 - INFO - Carregando todos os produtos...
+2025-05-08 14:39:09,617 - INFO - Encontrados 0 produtos distintos
+2025-05-08 14:39:09,618 - ERROR - ERRO CRÍTICO: Nenhum link de produto encontrado!
+2025-05-08 14:39:11,849 - INFO - Navegador finalizado
+2025-05-08 14:45:15,547 - INFO - === INÍCIO DO SCRAPING ===
+2025-05-08 14:45:15,547 - INFO - ====== WebDriver manager ======
+2025-05-08 14:45:16,609 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-08 14:45:16,649 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-08 14:45:16,672 - INFO - Driver [C:\Users\andrew.reis\.wdm\drivers\chromedriver\win64\135.0.7049.114\chromedriver-win32/chromedriver.exe] found in cache
+2025-05-08 14:45:17,946 - INFO - Acessando: https://www.sodimac.com.br/sodimac-br/category/cat20001/Ferramentas/
+2025-05-08 14:45:40,949 - ERROR - Erro durante o scraping: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00CCD363+60275]
+	GetHandleVerifier [0x00CCD3A4+60340]
+	(No symbol) [0x00B006F3]
+	(No symbol) [0x00B48690]
+	(No symbol) [0x00B48A2B]
+	(No symbol) [0x00B90EE2]
+	(No symbol) [0x00B6D0D4]
+	(No symbol) [0x00B8E6EB]
+	(No symbol) [0x00B6CE86]
+	(No symbol) [0x00B3C623]
+	(No symbol) [0x00B3D474]
+	GetHandleVerifier [0x00F18FE3+2467827]
+	GetHandleVerifier [0x00F145E6+2448886]
+	GetHandleVerifier [0x00F2F80C+2560028]
+	GetHandleVerifier [0x00CE3DF5+153093]
+	GetHandleVerifier [0x00CEA3BD+179149]
+	GetHandleVerifier [0x00CD4BB8+91080]
+	GetHandleVerifier [0x00CD4D60+91504]
+	GetHandleVerifier [0x00CBFA10+4640]
+	BaseThreadInitThunk [0x75F77BA9+25]
+	RtlInitializeExceptionChain [0x774CC28B+107]
+	RtlClearBits [0x774CC20F+191]
+
+2025-05-08 14:45:43,156 - INFO - Navegador finalizado
+2025-05-08 14:45:43,156 - INFO - === FIM DO SCRAPING | Total de produtos: 0 ===
