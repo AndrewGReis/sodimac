@@ -445,3 +445,169 @@ URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modu
 09/05/2025 13:14:21 - INFO - Salvo 542 produtos em 'produtos_sodimac.csv'
 09/05/2025 13:14:21 - INFO - Coleta concluída com sucesso! Total: 542 produtos
 09/05/2025 13:14:21 - INFO - Execução finalizada
+09/05/2025 13:50:32 - INFO - ==== Iniciando programa de coleta ====
+09/05/2025 13:50:32 - INFO - Iniciando coleta para URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos
+09/05/2025 13:50:32 - DEBUG - Processando página 1 - URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=1
+09/05/2025 13:50:32 - DEBUG - Requisitando URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=1
+09/05/2025 13:50:32 - DEBUG - Resposta recebida - Status: 200, Tamanho: 995392 bytes
+09/05/2025 13:50:33 - DEBUG - Script __NEXT_DATA__ encontrado, extraindo dados JSON
+09/05/2025 13:50:33 - DEBUG - Iniciando análise dos dados dos produtos
+09/05/2025 13:50:33 - DEBUG - Encontrados 28 produtos para processar
+09/05/2025 13:50:33 - DEBUG - Produtos processados com sucesso: 28
+09/05/2025 13:50:33 - DEBUG - Página 1 processada - Total acumulado: 28 produtos
+09/05/2025 13:50:34 - DEBUG - Processando página 2 - URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=2
+09/05/2025 13:50:34 - DEBUG - Requisitando URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=2
+09/05/2025 13:50:35 - DEBUG - Resposta recebida - Status: 200, Tamanho: 1000697 bytes
+09/05/2025 13:50:36 - DEBUG - Script __NEXT_DATA__ encontrado, extraindo dados JSON
+09/05/2025 13:50:36 - DEBUG - Iniciando análise dos dados dos produtos
+09/05/2025 13:50:36 - DEBUG - Encontrados 28 produtos para processar
+09/05/2025 13:50:36 - DEBUG - Produtos processados com sucesso: 28
+09/05/2025 13:50:36 - DEBUG - Página 2 processada - Total acumulado: 56 produtos
+09/05/2025 13:50:37 - DEBUG - Processando página 3 - URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=3
+09/05/2025 13:50:37 - DEBUG - Requisitando URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=3
+09/05/2025 13:50:37 - DEBUG - Resposta recebida - Status: 200, Tamanho: 998614 bytes
+09/05/2025 13:50:38 - DEBUG - Script __NEXT_DATA__ encontrado, extraindo dados JSON
+09/05/2025 13:50:38 - DEBUG - Iniciando análise dos dados dos produtos
+09/05/2025 13:50:38 - DEBUG - Encontrados 28 produtos para processar
+09/05/2025 13:50:38 - DEBUG - Produtos processados com sucesso: 28
+09/05/2025 13:50:38 - DEBUG - Página 3 processada - Total acumulado: 84 produtos
+09/05/2025 13:50:39 - DEBUG - Processando página 4 - URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=4
+09/05/2025 13:50:39 - DEBUG - Requisitando URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=4
+09/05/2025 13:50:40 - DEBUG - Resposta recebida - Status: 200, Tamanho: 1002094 bytes
+09/05/2025 13:50:40 - DEBUG - Script __NEXT_DATA__ encontrado, extraindo dados JSON
+09/05/2025 13:50:40 - DEBUG - Iniciando análise dos dados dos produtos
+09/05/2025 13:50:40 - DEBUG - Encontrados 28 produtos para processar
+09/05/2025 13:50:40 - DEBUG - Produtos processados com sucesso: 28
+09/05/2025 13:50:40 - DEBUG - Página 4 processada - Total acumulado: 112 produtos
+09/05/2025 13:50:41 - DEBUG - Processando página 5 - URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=5
+09/05/2025 13:50:41 - DEBUG - Requisitando URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=5
+09/05/2025 13:50:42 - DEBUG - Resposta recebida - Status: 200, Tamanho: 1000235 bytes
+09/05/2025 13:50:43 - DEBUG - Script __NEXT_DATA__ encontrado, extraindo dados JSON
+09/05/2025 13:50:43 - DEBUG - Iniciando análise dos dados dos produtos
+09/05/2025 13:50:43 - DEBUG - Encontrados 28 produtos para processar
+09/05/2025 13:50:43 - DEBUG - Produtos processados com sucesso: 28
+09/05/2025 13:50:43 - DEBUG - Página 5 processada - Total acumulado: 140 produtos
+09/05/2025 13:50:44 - DEBUG - Processando página 6 - URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=6
+09/05/2025 13:50:44 - DEBUG - Requisitando URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=6
+09/05/2025 13:50:44 - DEBUG - Resposta recebida - Status: 200, Tamanho: 1001828 bytes
+09/05/2025 13:50:45 - DEBUG - Script __NEXT_DATA__ encontrado, extraindo dados JSON
+09/05/2025 13:50:45 - DEBUG - Iniciando análise dos dados dos produtos
+09/05/2025 13:50:45 - DEBUG - Encontrados 28 produtos para processar
+09/05/2025 13:50:45 - DEBUG - Produtos processados com sucesso: 28
+09/05/2025 13:50:45 - DEBUG - Página 6 processada - Total acumulado: 168 produtos
+09/05/2025 13:50:46 - DEBUG - Processando página 7 - URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=7
+09/05/2025 13:50:46 - DEBUG - Requisitando URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=7
+09/05/2025 13:50:47 - DEBUG - Resposta recebida - Status: 200, Tamanho: 1005152 bytes
+09/05/2025 13:50:48 - DEBUG - Script __NEXT_DATA__ encontrado, extraindo dados JSON
+09/05/2025 13:50:48 - DEBUG - Iniciando análise dos dados dos produtos
+09/05/2025 13:50:48 - DEBUG - Encontrados 28 produtos para processar
+09/05/2025 13:50:48 - DEBUG - Produtos processados com sucesso: 28
+09/05/2025 13:50:48 - DEBUG - Página 7 processada - Total acumulado: 196 produtos
+09/05/2025 13:50:49 - DEBUG - Processando página 8 - URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=8
+09/05/2025 13:50:49 - DEBUG - Requisitando URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=8
+09/05/2025 13:50:49 - DEBUG - Resposta recebida - Status: 200, Tamanho: 855738 bytes
+09/05/2025 13:50:50 - DEBUG - Script __NEXT_DATA__ encontrado, extraindo dados JSON
+09/05/2025 13:50:50 - DEBUG - Iniciando análise dos dados dos produtos
+09/05/2025 13:50:50 - DEBUG - Encontrados 10 produtos para processar
+09/05/2025 13:50:50 - DEBUG - Produtos processados com sucesso: 10
+09/05/2025 13:50:50 - DEBUG - Página 8 processada - Total acumulado: 206 produtos
+09/05/2025 13:50:51 - DEBUG - Processando página 9 - URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=9
+09/05/2025 13:50:51 - DEBUG - Requisitando URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=9
+09/05/2025 13:50:51 - DEBUG - Resposta recebida - Status: 200, Tamanho: 933572 bytes
+09/05/2025 13:50:52 - DEBUG - Script __NEXT_DATA__ encontrado, extraindo dados JSON
+09/05/2025 13:50:52 - DEBUG - Iniciando análise dos dados dos produtos
+09/05/2025 13:50:52 - DEBUG - Encontrados 28 produtos para processar
+09/05/2025 13:50:52 - DEBUG - Produtos processados com sucesso: 28
+09/05/2025 13:50:52 - DEBUG - Página 9 processada - Total acumulado: 234 produtos
+09/05/2025 13:50:53 - DEBUG - Processando página 10 - URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=10
+09/05/2025 13:50:53 - DEBUG - Requisitando URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=10
+09/05/2025 13:50:54 - DEBUG - Resposta recebida - Status: 200, Tamanho: 933572 bytes
+09/05/2025 13:50:54 - DEBUG - Script __NEXT_DATA__ encontrado, extraindo dados JSON
+09/05/2025 13:50:54 - DEBUG - Iniciando análise dos dados dos produtos
+09/05/2025 13:50:54 - DEBUG - Encontrados 28 produtos para processar
+09/05/2025 13:50:54 - DEBUG - Produtos processados com sucesso: 28
+09/05/2025 13:50:54 - DEBUG - Página 10 processada - Total acumulado: 262 produtos
+09/05/2025 13:50:55 - DEBUG - Processando página 11 - URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=11
+09/05/2025 13:50:55 - DEBUG - Requisitando URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=11
+09/05/2025 13:50:56 - DEBUG - Resposta recebida - Status: 200, Tamanho: 933572 bytes
+09/05/2025 13:50:57 - DEBUG - Script __NEXT_DATA__ encontrado, extraindo dados JSON
+09/05/2025 13:50:57 - DEBUG - Iniciando análise dos dados dos produtos
+09/05/2025 13:50:57 - DEBUG - Encontrados 28 produtos para processar
+09/05/2025 13:50:57 - DEBUG - Produtos processados com sucesso: 28
+09/05/2025 13:50:57 - DEBUG - Página 11 processada - Total acumulado: 290 produtos
+09/05/2025 13:50:58 - DEBUG - Processando página 12 - URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=12
+09/05/2025 13:50:58 - DEBUG - Requisitando URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=12
+09/05/2025 13:50:58 - DEBUG - Resposta recebida - Status: 200, Tamanho: 933572 bytes
+09/05/2025 13:50:59 - DEBUG - Script __NEXT_DATA__ encontrado, extraindo dados JSON
+09/05/2025 13:50:59 - DEBUG - Iniciando análise dos dados dos produtos
+09/05/2025 13:50:59 - DEBUG - Encontrados 28 produtos para processar
+09/05/2025 13:50:59 - DEBUG - Produtos processados com sucesso: 28
+09/05/2025 13:50:59 - DEBUG - Página 12 processada - Total acumulado: 318 produtos
+09/05/2025 13:51:00 - DEBUG - Processando página 13 - URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=13
+09/05/2025 13:51:00 - DEBUG - Requisitando URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=13
+09/05/2025 13:51:01 - DEBUG - Resposta recebida - Status: 200, Tamanho: 933572 bytes
+09/05/2025 13:51:02 - DEBUG - Script __NEXT_DATA__ encontrado, extraindo dados JSON
+09/05/2025 13:51:02 - DEBUG - Iniciando análise dos dados dos produtos
+09/05/2025 13:51:02 - DEBUG - Encontrados 28 produtos para processar
+09/05/2025 13:51:02 - DEBUG - Produtos processados com sucesso: 28
+09/05/2025 13:51:02 - DEBUG - Página 13 processada - Total acumulado: 346 produtos
+09/05/2025 13:51:03 - DEBUG - Processando página 14 - URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=14
+09/05/2025 13:51:03 - DEBUG - Requisitando URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=14
+09/05/2025 13:51:03 - DEBUG - Resposta recebida - Status: 200, Tamanho: 933572 bytes
+09/05/2025 13:51:04 - DEBUG - Script __NEXT_DATA__ encontrado, extraindo dados JSON
+09/05/2025 13:51:04 - DEBUG - Iniciando análise dos dados dos produtos
+09/05/2025 13:51:04 - DEBUG - Encontrados 28 produtos para processar
+09/05/2025 13:51:04 - DEBUG - Produtos processados com sucesso: 28
+09/05/2025 13:51:04 - DEBUG - Página 14 processada - Total acumulado: 374 produtos
+09/05/2025 13:51:05 - DEBUG - Processando página 15 - URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=15
+09/05/2025 13:51:05 - DEBUG - Requisitando URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=15
+09/05/2025 13:51:05 - DEBUG - Resposta recebida - Status: 200, Tamanho: 933572 bytes
+09/05/2025 13:51:06 - DEBUG - Script __NEXT_DATA__ encontrado, extraindo dados JSON
+09/05/2025 13:51:06 - DEBUG - Iniciando análise dos dados dos produtos
+09/05/2025 13:51:06 - DEBUG - Encontrados 28 produtos para processar
+09/05/2025 13:51:06 - DEBUG - Produtos processados com sucesso: 28
+09/05/2025 13:51:06 - DEBUG - Página 15 processada - Total acumulado: 402 produtos
+09/05/2025 13:51:07 - DEBUG - Processando página 16 - URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=16
+09/05/2025 13:51:07 - DEBUG - Requisitando URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=16
+09/05/2025 13:51:08 - DEBUG - Resposta recebida - Status: 200, Tamanho: 933572 bytes
+09/05/2025 13:51:08 - DEBUG - Script __NEXT_DATA__ encontrado, extraindo dados JSON
+09/05/2025 13:51:08 - DEBUG - Iniciando análise dos dados dos produtos
+09/05/2025 13:51:08 - DEBUG - Encontrados 28 produtos para processar
+09/05/2025 13:51:08 - DEBUG - Produtos processados com sucesso: 28
+09/05/2025 13:51:08 - DEBUG - Página 16 processada - Total acumulado: 430 produtos
+09/05/2025 13:51:09 - DEBUG - Processando página 17 - URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=17
+09/05/2025 13:51:09 - DEBUG - Requisitando URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=17
+09/05/2025 13:51:10 - DEBUG - Resposta recebida - Status: 200, Tamanho: 933572 bytes
+09/05/2025 13:51:10 - DEBUG - Script __NEXT_DATA__ encontrado, extraindo dados JSON
+09/05/2025 13:51:10 - DEBUG - Iniciando análise dos dados dos produtos
+09/05/2025 13:51:10 - DEBUG - Encontrados 28 produtos para processar
+09/05/2025 13:51:10 - DEBUG - Produtos processados com sucesso: 28
+09/05/2025 13:51:10 - DEBUG - Página 17 processada - Total acumulado: 458 produtos
+09/05/2025 13:51:12 - DEBUG - Processando página 18 - URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=18
+09/05/2025 13:51:12 - DEBUG - Requisitando URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=18
+09/05/2025 13:51:12 - DEBUG - Resposta recebida - Status: 200, Tamanho: 933572 bytes
+09/05/2025 13:51:13 - DEBUG - Script __NEXT_DATA__ encontrado, extraindo dados JSON
+09/05/2025 13:51:13 - DEBUG - Iniciando análise dos dados dos produtos
+09/05/2025 13:51:13 - DEBUG - Encontrados 28 produtos para processar
+09/05/2025 13:51:13 - DEBUG - Produtos processados com sucesso: 28
+09/05/2025 13:51:13 - DEBUG - Página 18 processada - Total acumulado: 486 produtos
+09/05/2025 13:51:14 - DEBUG - Processando página 19 - URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=19
+09/05/2025 13:51:14 - DEBUG - Requisitando URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=19
+09/05/2025 13:51:14 - DEBUG - Resposta recebida - Status: 200, Tamanho: 933572 bytes
+09/05/2025 13:51:15 - DEBUG - Script __NEXT_DATA__ encontrado, extraindo dados JSON
+09/05/2025 13:51:15 - DEBUG - Iniciando análise dos dados dos produtos
+09/05/2025 13:51:15 - DEBUG - Encontrados 28 produtos para processar
+09/05/2025 13:51:15 - DEBUG - Produtos processados com sucesso: 28
+09/05/2025 13:51:15 - DEBUG - Página 19 processada - Total acumulado: 514 produtos
+09/05/2025 13:51:16 - DEBUG - Processando página 20 - URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=20
+09/05/2025 13:51:16 - DEBUG - Requisitando URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=20
+09/05/2025 13:51:17 - DEBUG - Resposta recebida - Status: 200, Tamanho: 933572 bytes
+09/05/2025 13:51:17 - DEBUG - Script __NEXT_DATA__ encontrado, extraindo dados JSON
+09/05/2025 13:51:17 - DEBUG - Iniciando análise dos dados dos produtos
+09/05/2025 13:51:17 - DEBUG - Encontrados 28 produtos para processar
+09/05/2025 13:51:17 - DEBUG - Produtos processados com sucesso: 28
+09/05/2025 13:51:17 - DEBUG - Página 20 processada - Total acumulado: 542 produtos
+09/05/2025 13:51:18 - INFO - Coleta finalizada - Total de produtos: 542
+09/05/2025 13:51:18 - INFO - Salvo 542 produtos em 'produtos_sodimac.csv'
+09/05/2025 13:51:18 - INFO - Coleta concluída com sucesso! Total: 542 produtos
+09/05/2025 13:51:18 - INFO - ==== Programa finalizado ====
