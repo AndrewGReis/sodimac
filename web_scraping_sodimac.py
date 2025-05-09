@@ -7,23 +7,18 @@ from bs4 import BeautifulSoup
 
 def configure_logging():
     """Configura o sistema de logging para arquivo e terminal"""
-    # Limpa handlers existentes se houver
     logging.getLogger().handlers = []
     
-    # Cria logger
     logger = logging.getLogger()
     logger.setLevel(logging.DEBUG)
     
-    # Formato comum para ambos handlers
     formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s', datefmt='%d/%m/%Y %H:%M:%S')
     
-    # Handler para arquivo (todos os logs)
     file_handler = logging.FileHandler('sodimac_scraping.log', mode='a', encoding='utf-8')
     file_handler.setFormatter(formatter)
     file_handler.setLevel(logging.DEBUG)
     logger.addHandler(file_handler)
     
-    # Handler para terminal (apenas mensagens específicas)
     class TerminalFilter(logging.Filter):
         def filter(self, record):
             return any(msg in record.getMessage() for msg in [
@@ -36,11 +31,9 @@ def configure_logging():
     stream_handler.addFilter(TerminalFilter())
     logger.addHandler(stream_handler)
     
-    # Desativa logs de bibliotecas externas
     logging.getLogger("requests").setLevel(logging.WARNING)
     logging.getLogger("urllib3").setLevel(logging.WARNING)
 
-# Configurações globais
 HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
     'Accept-Language': 'pt-BR,pt;q=0.9',
