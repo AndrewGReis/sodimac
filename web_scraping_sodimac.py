@@ -12,7 +12,7 @@ logging.basicConfig(
     datefmt='%d/%m/%Y %H:%M:%S',
     handlers=[
         logging.StreamHandler(),  # Para exibir no console
-        logging.FileHandler('sodimac_scraping.log', mode='w', encoding='utf-8')  # Para salvar em arquivo
+        logging.FileHandler('sodimac_scraping.log', mode='a', encoding='utf-8')  # Para salvar em arquivo
     ]
 )
 
