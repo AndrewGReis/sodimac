@@ -1,65 +1,120 @@
 import requests
 from bs4 import BeautifulSoup
+import json
+import time
 import logging
 import csv
-import time
-from collections import defaultdict
-import socket
 
-# ========== CONFIGURAÇÕES GLOBAIS ==========
-HEADERS = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
-    'Accept-Language': 'pt-BR,pt;q=0.9',
-    'Referer': 'https://www.sodimac.com.br/'
-}
-REQUEST_TIMEOUT = 30
-DELAY_BETWEEN_REQUESTS = 2
-MAX_RETRIES = 3
-SKIP_FAILED_CATEGORIES = True
-MAX_PAGES_PER_CATEGORY = 5
-
-# Configuração de logging
+# Configuração de logging para salvar os logs em um arquivo e no console
 logging.basicConfig(
-    filename='sodimac_scraping.log',
     level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(lineno)d - %(message)s',
-    datefmt='%d/%m/%Y %H:%M:%S'
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    datefmt='%d/%m/%Y %H:%M:%S',
+    handlers=[
+        logging.StreamHandler(),  # Para exibir no console
+        logging.FileHandler('sodimac_scraping.log', mode='w', encoding='utf-8')  # Para salvar em arquivo
+    ]
 )
 
-socket.setdefaulttimeout(REQUEST_TIMEOUT)
+# Headers para as requisições
+HEADERS = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36',
+    'Accept-Language': 'pt-BR,pt;q=0.9'
+}
 
-# ========== FUNÇÕES AUXILIARES ==========
-def log_execution_time(stages):
-    """Gera relatório de tempo de execução"""
-    total_time = sum(stages.values())
-    report = (
-        f"\nRELATORIO DE TEMPO:\n"
-        f"TOTAL: {total_time:.2f} segundos\n"
-        f"DOWNLOAD: {stages.get('DOWNLOAD', 0):.2f}s\n"
-        f"PARSING: {stages.get('PARSING', 0):.2f}s\n"
-        f"EXTRACAO: {stages.get('EXTRACAO', 0):.2f}s\n"
-        f"SALVAMENTO: {stages.get('SALVAMENTO', 0):.2f}s\n"
-        f"Concluido!\n"
-    )
-    return report
+# Constantes de configuração
+MAX_PAGES_PER_CATEGORY = 20  # Limite seguro de páginas por categoria
+REQUEST_DELAY = 1  # Delay entre requisições em segundos
 
-def generate_category_report(all_products):
-    """Gera relatório por categoria"""
-    category_counts = defaultdict(int)
-    for product in all_products:
-        category_counts[product['Categoria']] += 1
+def get_json_data(url):
+    """Obtém os dados JSON da página"""
+    try:
+        response = requests.get(url, headers=HEADERS, timeout=30)
+        response.raise_for_status()
+        
+        soup = BeautifulSoup(response.text, 'html.parser')
+        script_tag = soup.select_one('script#__NEXT_DATA__')
+        
+        if not script_tag:
+            logging.error("Script __NEXT_DATA__ não encontrado")
+            return None
+            
+        return json.loads(script_tag.text)
+    except Exception as e:
+        logging.error(f"Erro ao obter dados JSON: {str(e)}")
+        return None
+
+def extract_categories(homepage_url):
+    """Extrai categorias do JSON da página inicial"""
+    json_data = get_json_data(homepage_url)
+    if not json_data:
+        return []
     
-    sorted_categories = sorted(category_counts.items(), key=lambda x: x[1], reverse=True)
+    try:
+        categories = []
+        props = json_data['props']['pageProps']
+        
+        # Navega na estrutura JSON para encontrar as categorias
+        for category in props['initialState']['menu']['departments']:
+            cat_name = category['name']
+            cat_url = f"https://www.sodimac.com.br{category['url']}"
+            categories.append((cat_name, cat_url))
+        
+        logging.info(f"Encontradas {len(categories)} categorias")
+        return categories
+    except KeyError as e:
+        logging.error(f"Estrutura JSON inesperada: {str(e)}")
+        return []
+
+def scrape_category_products(category_name, category_url):
+    """Raspa produtos de uma categoria com limite de páginas"""
+    products = []
+    has_more_pages = True
+    page = 1
     
-    report = "\n=== RELATORIO POR CATEGORIA ===\n"
-    for category, count in sorted_categories:
-        report += f"- {category.ljust(25)}: {count} produtos\n"
-    report += "==============================="
+    while has_more_pages and page <= MAX_PAGES_PER_CATEGORY:
+        try:
+            current_url = f"{category_url.rstrip('/')}?currentpage={page}"
+            logging.info(f"Processando página {page}: {current_url}")
+            
+            json_data = get_json_data(current_url)
+            if not json_data:
+                has_more_pages = False
+                break
+                
+            # Extrai produtos da estrutura JSON
+            props = json_data['props']['pageProps']
+            if 'initialState' not in props or 'product' not in props['initialState']:
+                has_more_pages = False
+                break
+                
+            product_list = props['initialState']['product']['productList']['products']
+            if not product_list:
+                has_more_pages = False
+                break
+                
+            for product in product_list:
+                products.append({
+                    'Categoria': category_name,
+                    'Nome': product.get('name', 'N/A'),
+                    'Preco': product.get('price', {}).get('formattedValue', 'N/A'),
+                    'Desconto': product.get('discount', 'N/A'),
+                    'URL': f"https://www.sodimac.com.br{product.get('url', '')}"
+                })
+            
+            # Verifica se há mais páginas disponíveis
+            page += 1
+            time.sleep(REQUEST_DELAY)
+            
+        except Exception as e:
+            logging.error(f"Erro ao processar página {page}: {str(e)}")
+            has_more_pages = False
     
-    return report
+    logging.info(f"Total de produtos coletados em '{category_name}': {len(products)}")
+    return products
 
 def save_to_csv(products, filename='produtos_sodimac.csv'):
-    """Salva os dados em CSV"""
+    """Salva os produtos em arquivo CSV"""
     try:
         with open(filename, 'w', newline='', encoding='utf-8') as file:
             writer = csv.DictWriter(file, fieldnames=['Categoria', 'Nome', 'Preco', 'Desconto', 'URL'])
@@ -71,199 +126,34 @@ def save_to_csv(products, filename='produtos_sodimac.csv'):
         logging.error(f"Falha ao salvar CSV: {str(e)}")
         return False
 
-# ========== FUNÇÕES PRINCIPAIS ==========
-def get_categories(url_home):
-    """Coleta categorias do menu principal"""
-    try:
-        response = requests.get(url_home, headers=HEADERS, timeout=REQUEST_TIMEOUT)
-        response.raise_for_status()
-        
-        # DEBUG: Salvar HTML para análise
-        with open('debug_homepage.html', 'w', encoding='utf-8') as f:
-            f.write(response.text)
-        logging.info("HTML salvo em 'debug_homepage.html'")
-        
-        soup = BeautifulSoup(response.text, 'html.parser')
-        
-        # Tentativa com vários seletores alternativos
-        menu_categorias = (
-            soup.find('div', {'data-testid': 'nav-categories'}) or
-            soup.find('nav', class_='nav-categories') or
-            soup.find('ul', class_='nav-list') or
-            soup.find('div', class_='js-navigation')
-        )
-        
-        if not menu_categorias:
-            logging.error("HTML da página:\n" + soup.prettify()[:2000])  # Log parcial do HTML
-            raise ValueError("Menu de categorias não encontrado!")
-            
-        # Extração dos links
-        links_categorias = menu_categorias.find_all('a', href=True)
-        categories = []
-        
-        for link in links_categorias:
-            nome = link.text.strip()
-            if not nome or len(nome) < 2:  # Filtra links vazios ou muito curtos
-                continue
-                
-            url_relativa = link['href']
-            if not url_relativa.startswith('http'):
-                url_absoluta = f"https://www.sodimac.com.br{url_relativa}"
-            else:
-                url_absoluta = url_relativa
-                
-            # Filtra links inválidos
-            if 'category' in url_absoluta.lower() or 'departamento' in url_absoluta.lower():
-                categories.append((nome, url_absoluta))
-                logging.debug(f"Categoria encontrada: {nome} - {url_absoluta}")
-        
-        if not categories:
-            logging.warning("Nenhuma categoria válida encontrada após filtragem")
-        
-        return categories
-    
-    except Exception as e:
-        logging.error(f"Erro ao coletar categorias: {str(e)}", exc_info=True)
-        return []
-
-def scrape_products_from_category(category_name, category_url):
-    """Raspagem de produtos por categoria"""
-    products = []
-    page_url = category_url
-    
-    for page_count in range(1, MAX_PAGES_PER_CATEGORY + 1):
-        try:
-            logging.info(f"Acessando pagina {page_count}: {category_name}")
-            response = requests.get(page_url, headers=HEADERS, timeout=REQUEST_TIMEOUT)
-            
-            if response.status_code == 404:
-                logging.warning(f"Categoria nao encontrada (404): {category_name}")
-                break
-                
-            response.raise_for_status()
-            soup = BeautifulSoup(response.text, 'html.parser')
-            
-            # DEBUG: Salvar HTML da categoria
-            if page_count == 1:
-                with open(f'debug_{category_name}.html', 'w', encoding='utf-8') as f:
-                    f.write(response.text)
-                logging.info(f"HTML da categoria salvo em 'debug_{category_name}.html'")
-            
-            # Seletores alternativos para produtos
-            product_cards = (
-                soup.find_all('div', {'data-testid': 'product-card'}) or
-                soup.find_all('div', class_='product-card') or
-                soup.find_all('li', class_='product-item')
-            )
-            
-            if not product_cards:
-                logging.warning(f"Nenhum produto encontrado na pagina {page_count}")
-                break
-                
-            for card in product_cards:
-                try:
-                    # Extração com tratamento robusto
-                    name = card.find(['h3', 'h2'], class_=lambda x: x and 'title' in x.lower()).text.strip()
-                    price = card.find('span', class_=lambda x: x and 'price' in x.lower()).text.strip()
-                    link = card.find('a')['href']
-                    
-                    # Tratamento do link
-                    if not link.startswith('http'):
-                        link = f"https://www.sodimac.com.br{link.lstrip('/')}"
-                    
-                    # Desconto (opcional)
-                    discount_tag = card.find('span', class_=lambda x: x and 'discount' in x.lower())
-                    discount = discount_tag.text.strip() if discount_tag else 'Sem desconto'
-                    
-                    products.append({
-                        'Categoria': category_name,
-                        'Nome': name,
-                        'Preco': price,
-                        'Desconto': discount,
-                        'URL': link
-                    })
-                except Exception as e:
-                    logging.warning(f"Erro ao processar produto: {str(e)}")
-                    continue
-            
-            # Paginação
-            next_button = soup.find('a', {'aria-label': lambda x: x and 'próxima' in x.lower()})
-            if not next_button:
-                break
-                
-            page_url = next_button['href']
-            time.sleep(DELAY_BETWEEN_REQUESTS)
-            
-        except Exception as e:
-            logging.error(f"Erro na pagina {page_count}: {str(e)}")
-            break
-    
-    logging.info(f"Coletados {len(products)} produtos em '{category_name}'")
-    return products
-
-# ========== EXECUÇÃO PRINCIPAL ==========
 def main():
+    """Função principal de execução"""
+    logging.info("Iniciando execução do programa...")  # Log de início
+    
     try:
-        # Configuração inicial
-        logging.info("\n" + "="*50)
-        logging.info("INICIO DA EXECUCAO")
-        logging.info(f"Horario: {time.strftime('%d/%m/%Y %H:%M:%S')}")
-        logging.info("="*50 + "\n")
-
-        etapas_tempo = {}
-        global_start = time.time()
+        homepage_url = "https://www.sodimac.com.br"
         
-        # Fase 1: Coleta de categorias
-        logging.info("[ETAPA 1] COLETANDO CATEGORIAS...")
-        stage_start = time.time()
-        
-        categorias = get_categories("https://www.sodimac.com.br")
-        if not categorias:
-            logging.error("NENHUMA CATEGORIA VALIDA ENCONTRADA!")
-            if not SKIP_FAILED_CATEGORIES:
-                raise ValueError("Nenhuma categoria encontrada!")
-            categorias = [('Debug', 'https://www.sodimac.com.br/sodimac-br/category/cat20001/ferramentas/')]
-            logging.warning("Usando URL de debug para continuar")
-        
-        etapas_tempo['DOWNLOAD'] = time.time() - stage_start
-        logging.info(f"Encontradas {len(categorias)} categorias")
-        
-        # Fase 2: Coleta de produtos
-        logging.info("\n[ETAPA 2] COLETANDO PRODUTOS...")
-        stage_start = time.time()
-        all_products = []
-        
-        for nome, url in categorias:
-            logging.info(f"\nProcessando: {nome}")
-            produtos = scrape_products_from_category(nome, url)
-            all_products.extend(produtos)
-            logging.info(f"Progresso: {len(all_products)} produtos")
-            time.sleep(DELAY_BETWEEN_REQUESTS)
+        # 1. Coletar categorias
+        categories = extract_categories(homepage_url)
+        if not categories:
+            logging.error("Nenhuma categoria encontrada. Encerrando.")
+            return
             
-        etapas_tempo['EXTRACAO'] = time.time() - stage_start
+        # 2. Raspar produtos de cada categoria
+        all_products = []
+        for category_name, category_url in categories[:3]:  # Limitando a 3 categorias para teste
+            products = scrape_category_products(category_name, category_url)
+            all_products.extend(products)
+            
+        # 3. Salvar resultados
+        save_to_csv(all_products)
         
-        # Fase 3: Salvamento
-        logging.info("\n[ETAPA 3] SALVANDO DADOS...")
-        stage_start = time.time()
-        
-        if save_to_csv(all_products):
-            report = generate_category_report(all_products)
-            print(report)
-            with open('relatorio_categorias.txt', 'w', encoding='utf-8') as f:
-                f.write(report)
-        
-        etapas_tempo['SALVAMENTO'] = time.time() - stage_start
-        
-        # Relatório final
-        print(log_execution_time(etapas_tempo))
-        logging.info(f"TOTAL DE PRODUTOS: {len(all_products)}")
+        logging.info(f"Processo concluído. Total de produtos coletados: {len(all_products)}")
         
     except Exception as e:
-        logging.error("ERRO FATAL:\n" + str(e), exc_info=True)
+        logging.error(f"Erro na execução principal: {str(e)}")
     finally:
-        logging.info("\n" + "="*50)
-        logging.info("EXECUCAO FINALIZADA")
-        logging.info("="*50)
+        logging.info("Execução do programa finalizada.")  # Log de finalização
 
 if __name__ == "__main__":
     main()
