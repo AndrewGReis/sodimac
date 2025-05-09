@@ -33,3 +33,415 @@
 09/05/2025 12:32:32 - INFO - Sem produtos na página 1, encerrando a coleta.
 09/05/2025 12:32:32 - WARNING - Nenhum produto coletado.
 09/05/2025 12:32:32 - INFO - Execução do programa finalizada.
+09/05/2025 12:37:22 - INFO - Iniciando coleta de dados...
+09/05/2025 12:37:22 - INFO - Processando página 1...
+09/05/2025 12:37:24 - WARNING - Lista de produtos vazia ou não encontrada
+09/05/2025 12:37:24 - INFO - Nenhum produto na página 1, concluindo...
+09/05/2025 12:37:24 - WARNING - Nenhum produto coletado
+09/05/2025 12:37:24 - INFO - Execução finalizada
+09/05/2025 13:08:36 - INFO - Iniciando coleta de dados...
+09/05/2025 13:08:36 - INFO - 
+==================================================
+Processando página 1
+URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=1
+==================================================
+09/05/2025 13:08:36 - DEBUG - Request URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=1
+09/05/2025 13:08:36 - DEBUG - Starting new HTTPS connection (1): www.sodimac.com.br:443
+09/05/2025 13:08:37 - DEBUG - https://www.sodimac.com.br:443 "GET /sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=1 HTTP/11" 301 None
+09/05/2025 13:08:37 - DEBUG - https://www.sodimac.com.br:443 "GET /sodimac-br/category/cat170549/prateleiras-e-modulos/?currentpage=1 HTTP/11" 200 None
+09/05/2025 13:08:37 - DEBUG - Response status: 200
+09/05/2025 13:08:37 - DEBUG - Response size: 996144 bytes
+09/05/2025 13:08:38 - DEBUG - Tamanho do script content: 175650 chars
+09/05/2025 13:08:38 - DEBUG - Primeiros 100 chars do script: {"props":{"pageProps":{"searchProps":{"searchData":{"results":[{"productId":"868347","skuId":"868347
+09/05/2025 13:08:38 - DEBUG - Estrutura JSON básica válida. Keys principais: ['props', 'page', 'query', 'buildId', 'assetPrefix', 'runtimeConfig', 'isFallback', 'customServer', 'gip', 'appGip', 'head']
+09/05/2025 13:08:38 - DEBUG - Iniciando extração de produtos do JSON
+09/05/2025 13:08:38 - DEBUG - Props keys: ['pageProps', 'features', 'header', 'footer', 'query', 'tracingHeaders', 'pageName', 'isPrime', 'deviceType', 'isAbTesting', 'isModulo', 'moduloLandingUrl', 'isSearchBot', 'rating']
+09/05/2025 13:08:38 - DEBUG - pageProps keys: ['searchProps', 'categoryProps']
+09/05/2025 13:08:38 - WARNING - initialState não encontrado em pageProps
+09/05/2025 13:08:38 - WARNING - Interrompendo - sem produtos na página 1
+09/05/2025 13:08:38 - WARNING - Nenhum produto foi coletado
+09/05/2025 13:08:38 - INFO - Execução finalizada
+09/05/2025 13:13:24 - INFO - Iniciando coleta de dados...
+09/05/2025 13:13:24 - INFO - 
+==================================================
+Processando página 1
+URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=1
+==================================================
+09/05/2025 13:13:24 - DEBUG - Request URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=1
+09/05/2025 13:13:24 - DEBUG - Starting new HTTPS connection (1): www.sodimac.com.br:443
+09/05/2025 13:13:24 - DEBUG - https://www.sodimac.com.br:443 "GET /sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=1 HTTP/11" 301 None
+09/05/2025 13:13:24 - DEBUG - https://www.sodimac.com.br:443 "GET /sodimac-br/category/cat170549/prateleiras-e-modulos/?currentpage=1 HTTP/11" 200 None
+09/05/2025 13:13:24 - DEBUG - Response status: 200
+09/05/2025 13:13:24 - DEBUG - Response size: 996144 bytes
+09/05/2025 13:13:24 - DEBUG - Final URL after redirects: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos/?currentpage=1
+09/05/2025 13:13:25 - DEBUG - Tamanho do script content: 175650 chars
+09/05/2025 13:13:25 - DEBUG - Estrutura JSON básica válida. Keys principais: ['props', 'page', 'query', 'buildId', 'assetPrefix', 'runtimeConfig', 'isFallback', 'customServer', 'gip', 'appGip', 'head']
+09/05/2025 13:13:25 - DEBUG - Iniciando extração de produtos do JSON
+09/05/2025 13:13:25 - DEBUG - Estrutura searchData encontrada. Keys: ['results', 'sponsoredBanners', 'selectedFacets', 'facets', 'pagination', 'sortOptions', 'autocorrections', 'viewOptions', 'endPoints', 'banners', 'queryId', 'smartBanner']
+09/05/2025 13:13:25 - DEBUG - Quantidade de produtos encontrados: 28
+09/05/2025 13:13:25 - DEBUG - Exemplo de produto (primeiro item): {'displayName': 'Prateleira Eco 20x40x1,5cm Branco', 'price': None, 'url': None, 'productId': '868347'}
+09/05/2025 13:13:25 - INFO - Página 1: Adicionados 28 produtos (Total: 28)
+09/05/2025 13:13:26 - INFO - 
+==================================================
+Processando página 2
+URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=2
+==================================================
+09/05/2025 13:13:26 - DEBUG - Request URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=2
+09/05/2025 13:13:26 - DEBUG - Starting new HTTPS connection (1): www.sodimac.com.br:443
+09/05/2025 13:13:27 - DEBUG - https://www.sodimac.com.br:443 "GET /sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=2 HTTP/11" 301 None
+09/05/2025 13:13:28 - DEBUG - https://www.sodimac.com.br:443 "GET /sodimac-br/category/cat170549/prateleiras-e-modulos/?currentpage=2 HTTP/11" 200 None
+09/05/2025 13:13:28 - DEBUG - Response status: 200
+09/05/2025 13:13:28 - DEBUG - Response size: 1000697 bytes
+09/05/2025 13:13:28 - DEBUG - Final URL after redirects: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos/?currentpage=2
+09/05/2025 13:13:29 - DEBUG - Tamanho do script content: 177651 chars
+09/05/2025 13:13:29 - DEBUG - Estrutura JSON básica válida. Keys principais: ['props', 'page', 'query', 'buildId', 'assetPrefix', 'runtimeConfig', 'isFallback', 'customServer', 'gip', 'appGip', 'head']
+09/05/2025 13:13:29 - DEBUG - Iniciando extração de produtos do JSON
+09/05/2025 13:13:29 - DEBUG - Estrutura searchData encontrada. Keys: ['results', 'sponsoredBanners', 'selectedFacets', 'facets', 'pagination', 'sortOptions', 'autocorrections', 'viewOptions', 'endPoints', 'banners', 'queryId', 'smartBanner']
+09/05/2025 13:13:29 - DEBUG - Quantidade de produtos encontrados: 28
+09/05/2025 13:13:29 - DEBUG - Exemplo de produto (primeiro item): {'displayName': 'Trilho Organiza Duplo 96cm Ducasse', 'price': None, 'url': None, 'productId': '881737'}
+09/05/2025 13:13:29 - INFO - Página 2: Adicionados 28 produtos (Total: 56)
+09/05/2025 13:13:30 - INFO - 
+==================================================
+Processando página 3
+URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=3
+==================================================
+09/05/2025 13:13:30 - DEBUG - Request URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=3
+09/05/2025 13:13:30 - DEBUG - Starting new HTTPS connection (1): www.sodimac.com.br:443
+09/05/2025 13:13:31 - DEBUG - https://www.sodimac.com.br:443 "GET /sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=3 HTTP/11" 301 None
+09/05/2025 13:13:32 - DEBUG - https://www.sodimac.com.br:443 "GET /sodimac-br/category/cat170549/prateleiras-e-modulos/?currentpage=3 HTTP/11" 200 None
+09/05/2025 13:13:32 - DEBUG - Response status: 200
+09/05/2025 13:13:32 - DEBUG - Response size: 1001543 bytes
+09/05/2025 13:13:32 - DEBUG - Final URL after redirects: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos/?currentpage=3
+09/05/2025 13:13:32 - DEBUG - Tamanho do script content: 177924 chars
+09/05/2025 13:13:32 - DEBUG - Estrutura JSON básica válida. Keys principais: ['props', 'page', 'query', 'buildId', 'assetPrefix', 'runtimeConfig', 'isFallback', 'customServer', 'gip', 'appGip', 'head']
+09/05/2025 13:13:32 - DEBUG - Iniciando extração de produtos do JSON
+09/05/2025 13:13:32 - DEBUG - Estrutura searchData encontrada. Keys: ['results', 'sponsoredBanners', 'selectedFacets', 'facets', 'pagination', 'sortOptions', 'autocorrections', 'viewOptions', 'endPoints', 'banners', 'queryId', 'smartBanner']
+09/05/2025 13:13:32 - DEBUG - Quantidade de produtos encontrados: 28
+09/05/2025 13:13:32 - DEBUG - Exemplo de produto (primeiro item): {'displayName': 'Papeleira Loft Sq Bk 2020 B83', 'price': None, 'url': None, 'productId': '1032903'}
+09/05/2025 13:13:32 - INFO - Página 3: Adicionados 28 produtos (Total: 84)
+09/05/2025 13:13:33 - INFO - 
+==================================================
+Processando página 4
+URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=4
+==================================================
+09/05/2025 13:13:33 - DEBUG - Request URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=4
+09/05/2025 13:13:33 - DEBUG - Starting new HTTPS connection (1): www.sodimac.com.br:443
+09/05/2025 13:13:34 - DEBUG - https://www.sodimac.com.br:443 "GET /sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=4 HTTP/11" 301 None
+09/05/2025 13:13:35 - DEBUG - https://www.sodimac.com.br:443 "GET /sodimac-br/category/cat170549/prateleiras-e-modulos/?currentpage=4 HTTP/11" 200 None
+09/05/2025 13:13:35 - DEBUG - Response status: 200
+09/05/2025 13:13:35 - DEBUG - Response size: 1001590 bytes
+09/05/2025 13:13:35 - DEBUG - Final URL after redirects: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos/?currentpage=4
+09/05/2025 13:13:36 - DEBUG - Tamanho do script content: 177594 chars
+09/05/2025 13:13:36 - DEBUG - Estrutura JSON básica válida. Keys principais: ['props', 'page', 'query', 'buildId', 'assetPrefix', 'runtimeConfig', 'isFallback', 'customServer', 'gip', 'appGip', 'head']
+09/05/2025 13:13:36 - DEBUG - Iniciando extração de produtos do JSON
+09/05/2025 13:13:36 - DEBUG - Estrutura searchData encontrada. Keys: ['results', 'sponsoredBanners', 'selectedFacets', 'facets', 'pagination', 'sortOptions', 'autocorrections', 'viewOptions', 'endPoints', 'banners', 'queryId', 'smartBanner']
+09/05/2025 13:13:36 - DEBUG - Quantidade de produtos encontrados: 28
+09/05/2025 13:13:36 - DEBUG - Exemplo de produto (primeiro item): {'displayName': 'Suporte Lateral 9, Branco', 'price': None, 'url': None, 'productId': '631880'}
+09/05/2025 13:13:36 - INFO - Página 4: Adicionados 28 produtos (Total: 112)
+09/05/2025 13:13:37 - INFO - 
+==================================================
+Processando página 5
+URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=5
+==================================================
+09/05/2025 13:13:37 - DEBUG - Request URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=5
+09/05/2025 13:13:37 - DEBUG - Starting new HTTPS connection (1): www.sodimac.com.br:443
+09/05/2025 13:13:38 - DEBUG - https://www.sodimac.com.br:443 "GET /sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=5 HTTP/11" 301 None
+09/05/2025 13:13:39 - DEBUG - https://www.sodimac.com.br:443 "GET /sodimac-br/category/cat170549/prateleiras-e-modulos/?currentpage=5 HTTP/11" 200 None
+09/05/2025 13:13:39 - DEBUG - Response status: 200
+09/05/2025 13:13:39 - DEBUG - Response size: 1000235 bytes
+09/05/2025 13:13:39 - DEBUG - Final URL after redirects: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos/?currentpage=5
+09/05/2025 13:13:40 - DEBUG - Tamanho do script content: 176282 chars
+09/05/2025 13:13:40 - DEBUG - Estrutura JSON básica válida. Keys principais: ['props', 'page', 'query', 'buildId', 'assetPrefix', 'runtimeConfig', 'isFallback', 'customServer', 'gip', 'appGip', 'head']
+09/05/2025 13:13:40 - DEBUG - Iniciando extração de produtos do JSON
+09/05/2025 13:13:40 - DEBUG - Estrutura searchData encontrada. Keys: ['results', 'sponsoredBanners', 'selectedFacets', 'facets', 'pagination', 'sortOptions', 'autocorrections', 'viewOptions', 'endPoints', 'banners', 'queryId', 'smartBanner']
+09/05/2025 13:13:40 - DEBUG - Quantidade de produtos encontrados: 28
+09/05/2025 13:13:40 - DEBUG - Exemplo de produto (primeiro item): {'displayName': 'Suporte de Engate Simples 20cm Preto Ducasse', 'price': None, 'url': None, 'productId': '742829'}
+09/05/2025 13:13:40 - INFO - Página 5: Adicionados 28 produtos (Total: 140)
+09/05/2025 13:13:41 - INFO - 
+==================================================
+Processando página 6
+URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=6
+==================================================
+09/05/2025 13:13:41 - DEBUG - Request URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=6
+09/05/2025 13:13:41 - DEBUG - Starting new HTTPS connection (1): www.sodimac.com.br:443
+09/05/2025 13:13:42 - DEBUG - https://www.sodimac.com.br:443 "GET /sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=6 HTTP/11" 301 None
+09/05/2025 13:13:43 - DEBUG - https://www.sodimac.com.br:443 "GET /sodimac-br/category/cat170549/prateleiras-e-modulos/?currentpage=6 HTTP/11" 200 None
+09/05/2025 13:13:43 - DEBUG - Response status: 200
+09/05/2025 13:13:43 - DEBUG - Response size: 1002564 bytes
+09/05/2025 13:13:43 - DEBUG - Final URL after redirects: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos/?currentpage=6
+09/05/2025 13:13:44 - DEBUG - Tamanho do script content: 178624 chars
+09/05/2025 13:13:44 - DEBUG - Estrutura JSON básica válida. Keys principais: ['props', 'page', 'query', 'buildId', 'assetPrefix', 'runtimeConfig', 'isFallback', 'customServer', 'gip', 'appGip', 'head']
+09/05/2025 13:13:44 - DEBUG - Iniciando extração de produtos do JSON
+09/05/2025 13:13:44 - DEBUG - Estrutura searchData encontrada. Keys: ['results', 'sponsoredBanners', 'selectedFacets', 'facets', 'pagination', 'sortOptions', 'autocorrections', 'viewOptions', 'endPoints', 'banners', 'queryId', 'smartBanner']
+09/05/2025 13:13:44 - DEBUG - Quantidade de produtos encontrados: 28
+09/05/2025 13:13:44 - DEBUG - Exemplo de produto (primeiro item): {'displayName': 'Prateleira com Suporte 20X80X1,5 Branca', 'price': None, 'url': None, 'productId': '882853'}
+09/05/2025 13:13:44 - INFO - Página 6: Adicionados 28 produtos (Total: 168)
+09/05/2025 13:13:45 - INFO - 
+==================================================
+Processando página 7
+URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=7
+==================================================
+09/05/2025 13:13:45 - DEBUG - Request URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=7
+09/05/2025 13:13:45 - DEBUG - Starting new HTTPS connection (1): www.sodimac.com.br:443
+09/05/2025 13:13:45 - DEBUG - https://www.sodimac.com.br:443 "GET /sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=7 HTTP/11" 301 None
+09/05/2025 13:13:46 - DEBUG - https://www.sodimac.com.br:443 "GET /sodimac-br/category/cat170549/prateleiras-e-modulos/?currentpage=7 HTTP/11" 200 None
+09/05/2025 13:13:46 - DEBUG - Response status: 200
+09/05/2025 13:13:46 - DEBUG - Response size: 1002886 bytes
+09/05/2025 13:13:46 - DEBUG - Final URL after redirects: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos/?currentpage=7
+09/05/2025 13:13:47 - DEBUG - Tamanho do script content: 178268 chars
+09/05/2025 13:13:47 - DEBUG - Estrutura JSON básica válida. Keys principais: ['props', 'page', 'query', 'buildId', 'assetPrefix', 'runtimeConfig', 'isFallback', 'customServer', 'gip', 'appGip', 'head']
+09/05/2025 13:13:47 - DEBUG - Iniciando extração de produtos do JSON
+09/05/2025 13:13:47 - DEBUG - Estrutura searchData encontrada. Keys: ['results', 'sponsoredBanners', 'selectedFacets', 'facets', 'pagination', 'sortOptions', 'autocorrections', 'viewOptions', 'endPoints', 'banners', 'queryId', 'smartBanner']
+09/05/2025 13:13:47 - DEBUG - Quantidade de produtos encontrados: 28
+09/05/2025 13:13:47 - DEBUG - Exemplo de produto (primeiro item): {'displayName': 'Prateleira com Suporte Tucano 25X40 Branca', 'price': None, 'url': None, 'productId': '879322002'}
+09/05/2025 13:13:47 - INFO - Página 7: Adicionados 28 produtos (Total: 196)
+09/05/2025 13:13:48 - INFO - 
+==================================================
+Processando página 8
+URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=8
+==================================================
+09/05/2025 13:13:48 - DEBUG - Request URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=8
+09/05/2025 13:13:48 - DEBUG - Starting new HTTPS connection (1): www.sodimac.com.br:443
+09/05/2025 13:13:48 - DEBUG - https://www.sodimac.com.br:443 "GET /sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=8 HTTP/11" 301 None
+09/05/2025 13:13:49 - DEBUG - https://www.sodimac.com.br:443 "GET /sodimac-br/category/cat170549/prateleiras-e-modulos/?currentpage=8 HTTP/11" 200 None
+09/05/2025 13:13:50 - DEBUG - Response status: 200
+09/05/2025 13:13:50 - DEBUG - Response size: 857937 bytes
+09/05/2025 13:13:50 - DEBUG - Final URL after redirects: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos/?currentpage=8
+09/05/2025 13:13:50 - DEBUG - Tamanho do script content: 147478 chars
+09/05/2025 13:13:50 - DEBUG - Estrutura JSON básica válida. Keys principais: ['props', 'page', 'query', 'buildId', 'assetPrefix', 'runtimeConfig', 'isFallback', 'customServer', 'gip', 'appGip', 'head']
+09/05/2025 13:13:50 - DEBUG - Iniciando extração de produtos do JSON
+09/05/2025 13:13:50 - DEBUG - Estrutura searchData encontrada. Keys: ['results', 'sponsoredBanners', 'selectedFacets', 'facets', 'pagination', 'sortOptions', 'autocorrections', 'viewOptions', 'endPoints', 'banners', 'queryId', 'smartBanner']
+09/05/2025 13:13:50 - DEBUG - Quantidade de produtos encontrados: 10
+09/05/2025 13:13:50 - DEBUG - Exemplo de produto (primeiro item): {'displayName': 'Suporte Engate Duplo 22cm 100Kg Branco Ducasse', 'price': None, 'url': None, 'productId': '785117'}
+09/05/2025 13:13:50 - INFO - Página 8: Adicionados 10 produtos (Total: 206)
+09/05/2025 13:13:51 - INFO - 
+==================================================
+Processando página 9
+URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=9
+==================================================
+09/05/2025 13:13:51 - DEBUG - Request URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=9
+09/05/2025 13:13:51 - DEBUG - Starting new HTTPS connection (1): www.sodimac.com.br:443
+09/05/2025 13:13:52 - DEBUG - https://www.sodimac.com.br:443 "GET /sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=9 HTTP/11" 302 None
+09/05/2025 13:13:52 - DEBUG - https://www.sodimac.com.br:443 "GET /sodimac-br/category/cat620009/organiza%C3%A7ao/ HTTP/11" 200 None
+09/05/2025 13:13:53 - DEBUG - Response status: 200
+09/05/2025 13:13:53 - DEBUG - Response size: 934106 bytes
+09/05/2025 13:13:53 - DEBUG - Final URL after redirects: https://www.sodimac.com.br/sodimac-br/category/cat620009/organiza%C3%A7ao/
+09/05/2025 13:13:53 - DEBUG - Tamanho do script content: 187162 chars
+09/05/2025 13:13:53 - DEBUG - Estrutura JSON básica válida. Keys principais: ['props', 'page', 'query', 'buildId', 'assetPrefix', 'runtimeConfig', 'isFallback', 'customServer', 'gip', 'appGip', 'head']
+09/05/2025 13:13:53 - DEBUG - Iniciando extração de produtos do JSON
+09/05/2025 13:13:53 - DEBUG - Estrutura searchData encontrada. Keys: ['results', 'sponsoredBanners', 'selectedFacets', 'facets', 'pagination', 'sortOptions', 'autocorrections', 'viewOptions', 'endPoints', 'banners', 'queryId', 'smartBanner']
+09/05/2025 13:13:53 - DEBUG - Quantidade de produtos encontrados: 28
+09/05/2025 13:13:53 - DEBUG - Exemplo de produto (primeiro item): {'displayName': 'Conjunto 8 Cabides Madeira Just Home Collection', 'price': None, 'url': None, 'productId': '555754'}
+09/05/2025 13:13:53 - INFO - Página 9: Adicionados 28 produtos (Total: 234)
+09/05/2025 13:13:54 - INFO - 
+==================================================
+Processando página 10
+URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=10
+==================================================
+09/05/2025 13:13:54 - DEBUG - Request URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=10
+09/05/2025 13:13:54 - DEBUG - Starting new HTTPS connection (1): www.sodimac.com.br:443
+09/05/2025 13:13:55 - DEBUG - https://www.sodimac.com.br:443 "GET /sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=10 HTTP/11" 302 None
+09/05/2025 13:13:55 - DEBUG - https://www.sodimac.com.br:443 "GET /sodimac-br/category/cat620009/organiza%C3%A7ao/ HTTP/11" 200 None
+09/05/2025 13:13:55 - DEBUG - Response status: 200
+09/05/2025 13:13:55 - DEBUG - Response size: 934106 bytes
+09/05/2025 13:13:55 - DEBUG - Final URL after redirects: https://www.sodimac.com.br/sodimac-br/category/cat620009/organiza%C3%A7ao/
+09/05/2025 13:13:56 - DEBUG - Tamanho do script content: 187162 chars
+09/05/2025 13:13:56 - DEBUG - Estrutura JSON básica válida. Keys principais: ['props', 'page', 'query', 'buildId', 'assetPrefix', 'runtimeConfig', 'isFallback', 'customServer', 'gip', 'appGip', 'head']
+09/05/2025 13:13:56 - DEBUG - Iniciando extração de produtos do JSON
+09/05/2025 13:13:56 - DEBUG - Estrutura searchData encontrada. Keys: ['results', 'sponsoredBanners', 'selectedFacets', 'facets', 'pagination', 'sortOptions', 'autocorrections', 'viewOptions', 'endPoints', 'banners', 'queryId', 'smartBanner']
+09/05/2025 13:13:56 - DEBUG - Quantidade de produtos encontrados: 28
+09/05/2025 13:13:56 - DEBUG - Exemplo de produto (primeiro item): {'displayName': 'Conjunto 8 Cabides Madeira Just Home Collection', 'price': None, 'url': None, 'productId': '555754'}
+09/05/2025 13:13:56 - INFO - Página 10: Adicionados 28 produtos (Total: 262)
+09/05/2025 13:13:57 - INFO - 
+==================================================
+Processando página 11
+URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=11
+==================================================
+09/05/2025 13:13:57 - DEBUG - Request URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=11
+09/05/2025 13:13:57 - DEBUG - Starting new HTTPS connection (1): www.sodimac.com.br:443
+09/05/2025 13:13:57 - DEBUG - https://www.sodimac.com.br:443 "GET /sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=11 HTTP/11" 302 None
+09/05/2025 13:13:57 - DEBUG - https://www.sodimac.com.br:443 "GET /sodimac-br/category/cat620009/organiza%C3%A7ao/ HTTP/11" 200 None
+09/05/2025 13:13:57 - DEBUG - Response status: 200
+09/05/2025 13:13:57 - DEBUG - Response size: 934106 bytes
+09/05/2025 13:13:57 - DEBUG - Final URL after redirects: https://www.sodimac.com.br/sodimac-br/category/cat620009/organiza%C3%A7ao/
+09/05/2025 13:13:58 - DEBUG - Tamanho do script content: 187162 chars
+09/05/2025 13:13:58 - DEBUG - Estrutura JSON básica válida. Keys principais: ['props', 'page', 'query', 'buildId', 'assetPrefix', 'runtimeConfig', 'isFallback', 'customServer', 'gip', 'appGip', 'head']
+09/05/2025 13:13:58 - DEBUG - Iniciando extração de produtos do JSON
+09/05/2025 13:13:58 - DEBUG - Estrutura searchData encontrada. Keys: ['results', 'sponsoredBanners', 'selectedFacets', 'facets', 'pagination', 'sortOptions', 'autocorrections', 'viewOptions', 'endPoints', 'banners', 'queryId', 'smartBanner']
+09/05/2025 13:13:58 - DEBUG - Quantidade de produtos encontrados: 28
+09/05/2025 13:13:58 - DEBUG - Exemplo de produto (primeiro item): {'displayName': 'Conjunto 8 Cabides Madeira Just Home Collection', 'price': None, 'url': None, 'productId': '555754'}
+09/05/2025 13:13:58 - INFO - Página 11: Adicionados 28 produtos (Total: 290)
+09/05/2025 13:13:59 - INFO - 
+==================================================
+Processando página 12
+URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=12
+==================================================
+09/05/2025 13:13:59 - DEBUG - Request URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=12
+09/05/2025 13:13:59 - DEBUG - Starting new HTTPS connection (1): www.sodimac.com.br:443
+09/05/2025 13:14:00 - DEBUG - https://www.sodimac.com.br:443 "GET /sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=12 HTTP/11" 302 None
+09/05/2025 13:14:00 - DEBUG - https://www.sodimac.com.br:443 "GET /sodimac-br/category/cat620009/organiza%C3%A7ao/ HTTP/11" 200 None
+09/05/2025 13:14:00 - DEBUG - Response status: 200
+09/05/2025 13:14:00 - DEBUG - Response size: 934106 bytes
+09/05/2025 13:14:00 - DEBUG - Final URL after redirects: https://www.sodimac.com.br/sodimac-br/category/cat620009/organiza%C3%A7ao/
+09/05/2025 13:14:01 - DEBUG - Tamanho do script content: 187162 chars
+09/05/2025 13:14:01 - DEBUG - Estrutura JSON básica válida. Keys principais: ['props', 'page', 'query', 'buildId', 'assetPrefix', 'runtimeConfig', 'isFallback', 'customServer', 'gip', 'appGip', 'head']
+09/05/2025 13:14:01 - DEBUG - Iniciando extração de produtos do JSON
+09/05/2025 13:14:01 - DEBUG - Estrutura searchData encontrada. Keys: ['results', 'sponsoredBanners', 'selectedFacets', 'facets', 'pagination', 'sortOptions', 'autocorrections', 'viewOptions', 'endPoints', 'banners', 'queryId', 'smartBanner']
+09/05/2025 13:14:01 - DEBUG - Quantidade de produtos encontrados: 28
+09/05/2025 13:14:01 - DEBUG - Exemplo de produto (primeiro item): {'displayName': 'Conjunto 8 Cabides Madeira Just Home Collection', 'price': None, 'url': None, 'productId': '555754'}
+09/05/2025 13:14:01 - INFO - Página 12: Adicionados 28 produtos (Total: 318)
+09/05/2025 13:14:02 - INFO - 
+==================================================
+Processando página 13
+URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=13
+==================================================
+09/05/2025 13:14:02 - DEBUG - Request URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=13
+09/05/2025 13:14:02 - DEBUG - Starting new HTTPS connection (1): www.sodimac.com.br:443
+09/05/2025 13:14:02 - DEBUG - https://www.sodimac.com.br:443 "GET /sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=13 HTTP/11" 302 None
+09/05/2025 13:14:02 - DEBUG - https://www.sodimac.com.br:443 "GET /sodimac-br/category/cat620009/organiza%C3%A7ao/ HTTP/11" 200 None
+09/05/2025 13:14:02 - DEBUG - Response status: 200
+09/05/2025 13:14:02 - DEBUG - Response size: 934106 bytes
+09/05/2025 13:14:02 - DEBUG - Final URL after redirects: https://www.sodimac.com.br/sodimac-br/category/cat620009/organiza%C3%A7ao/
+09/05/2025 13:14:03 - DEBUG - Tamanho do script content: 187162 chars
+09/05/2025 13:14:03 - DEBUG - Estrutura JSON básica válida. Keys principais: ['props', 'page', 'query', 'buildId', 'assetPrefix', 'runtimeConfig', 'isFallback', 'customServer', 'gip', 'appGip', 'head']
+09/05/2025 13:14:03 - DEBUG - Iniciando extração de produtos do JSON
+09/05/2025 13:14:03 - DEBUG - Estrutura searchData encontrada. Keys: ['results', 'sponsoredBanners', 'selectedFacets', 'facets', 'pagination', 'sortOptions', 'autocorrections', 'viewOptions', 'endPoints', 'banners', 'queryId', 'smartBanner']
+09/05/2025 13:14:03 - DEBUG - Quantidade de produtos encontrados: 28
+09/05/2025 13:14:03 - DEBUG - Exemplo de produto (primeiro item): {'displayName': 'Conjunto 8 Cabides Madeira Just Home Collection', 'price': None, 'url': None, 'productId': '555754'}
+09/05/2025 13:14:03 - INFO - Página 13: Adicionados 28 produtos (Total: 346)
+09/05/2025 13:14:04 - INFO - 
+==================================================
+Processando página 14
+URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=14
+==================================================
+09/05/2025 13:14:04 - DEBUG - Request URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=14
+09/05/2025 13:14:04 - DEBUG - Starting new HTTPS connection (1): www.sodimac.com.br:443
+09/05/2025 13:14:04 - DEBUG - https://www.sodimac.com.br:443 "GET /sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=14 HTTP/11" 302 None
+09/05/2025 13:14:05 - DEBUG - https://www.sodimac.com.br:443 "GET /sodimac-br/category/cat620009/organiza%C3%A7ao/ HTTP/11" 200 None
+09/05/2025 13:14:05 - DEBUG - Response status: 200
+09/05/2025 13:14:05 - DEBUG - Response size: 934106 bytes
+09/05/2025 13:14:05 - DEBUG - Final URL after redirects: https://www.sodimac.com.br/sodimac-br/category/cat620009/organiza%C3%A7ao/
+09/05/2025 13:14:05 - DEBUG - Tamanho do script content: 187162 chars
+09/05/2025 13:14:05 - DEBUG - Estrutura JSON básica válida. Keys principais: ['props', 'page', 'query', 'buildId', 'assetPrefix', 'runtimeConfig', 'isFallback', 'customServer', 'gip', 'appGip', 'head']
+09/05/2025 13:14:05 - DEBUG - Iniciando extração de produtos do JSON
+09/05/2025 13:14:05 - DEBUG - Estrutura searchData encontrada. Keys: ['results', 'sponsoredBanners', 'selectedFacets', 'facets', 'pagination', 'sortOptions', 'autocorrections', 'viewOptions', 'endPoints', 'banners', 'queryId', 'smartBanner']
+09/05/2025 13:14:05 - DEBUG - Quantidade de produtos encontrados: 28
+09/05/2025 13:14:05 - DEBUG - Exemplo de produto (primeiro item): {'displayName': 'Conjunto 8 Cabides Madeira Just Home Collection', 'price': None, 'url': None, 'productId': '555754'}
+09/05/2025 13:14:05 - INFO - Página 14: Adicionados 28 produtos (Total: 374)
+09/05/2025 13:14:06 - INFO - 
+==================================================
+Processando página 15
+URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=15
+==================================================
+09/05/2025 13:14:06 - DEBUG - Request URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=15
+09/05/2025 13:14:06 - DEBUG - Starting new HTTPS connection (1): www.sodimac.com.br:443
+09/05/2025 13:14:07 - DEBUG - https://www.sodimac.com.br:443 "GET /sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=15 HTTP/11" 302 None
+09/05/2025 13:14:07 - DEBUG - https://www.sodimac.com.br:443 "GET /sodimac-br/category/cat620009/organiza%C3%A7ao/ HTTP/11" 200 None
+09/05/2025 13:14:07 - DEBUG - Response status: 200
+09/05/2025 13:14:07 - DEBUG - Response size: 934106 bytes
+09/05/2025 13:14:07 - DEBUG - Final URL after redirects: https://www.sodimac.com.br/sodimac-br/category/cat620009/organiza%C3%A7ao/
+09/05/2025 13:14:08 - DEBUG - Tamanho do script content: 187162 chars
+09/05/2025 13:14:08 - DEBUG - Estrutura JSON básica válida. Keys principais: ['props', 'page', 'query', 'buildId', 'assetPrefix', 'runtimeConfig', 'isFallback', 'customServer', 'gip', 'appGip', 'head']
+09/05/2025 13:14:08 - DEBUG - Iniciando extração de produtos do JSON
+09/05/2025 13:14:08 - DEBUG - Estrutura searchData encontrada. Keys: ['results', 'sponsoredBanners', 'selectedFacets', 'facets', 'pagination', 'sortOptions', 'autocorrections', 'viewOptions', 'endPoints', 'banners', 'queryId', 'smartBanner']
+09/05/2025 13:14:08 - DEBUG - Quantidade de produtos encontrados: 28
+09/05/2025 13:14:08 - DEBUG - Exemplo de produto (primeiro item): {'displayName': 'Conjunto 8 Cabides Madeira Just Home Collection', 'price': None, 'url': None, 'productId': '555754'}
+09/05/2025 13:14:08 - INFO - Página 15: Adicionados 28 produtos (Total: 402)
+09/05/2025 13:14:09 - INFO - 
+==================================================
+Processando página 16
+URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=16
+==================================================
+09/05/2025 13:14:09 - DEBUG - Request URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=16
+09/05/2025 13:14:09 - DEBUG - Starting new HTTPS connection (1): www.sodimac.com.br:443
+09/05/2025 13:14:09 - DEBUG - https://www.sodimac.com.br:443 "GET /sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=16 HTTP/11" 302 None
+09/05/2025 13:14:10 - DEBUG - https://www.sodimac.com.br:443 "GET /sodimac-br/category/cat620009/organiza%C3%A7ao/ HTTP/11" 200 None
+09/05/2025 13:14:10 - DEBUG - Response status: 200
+09/05/2025 13:14:10 - DEBUG - Response size: 934106 bytes
+09/05/2025 13:14:10 - DEBUG - Final URL after redirects: https://www.sodimac.com.br/sodimac-br/category/cat620009/organiza%C3%A7ao/
+09/05/2025 13:14:10 - DEBUG - Tamanho do script content: 187162 chars
+09/05/2025 13:14:10 - DEBUG - Estrutura JSON básica válida. Keys principais: ['props', 'page', 'query', 'buildId', 'assetPrefix', 'runtimeConfig', 'isFallback', 'customServer', 'gip', 'appGip', 'head']
+09/05/2025 13:14:10 - DEBUG - Iniciando extração de produtos do JSON
+09/05/2025 13:14:10 - DEBUG - Estrutura searchData encontrada. Keys: ['results', 'sponsoredBanners', 'selectedFacets', 'facets', 'pagination', 'sortOptions', 'autocorrections', 'viewOptions', 'endPoints', 'banners', 'queryId', 'smartBanner']
+09/05/2025 13:14:10 - DEBUG - Quantidade de produtos encontrados: 28
+09/05/2025 13:14:10 - DEBUG - Exemplo de produto (primeiro item): {'displayName': 'Conjunto 8 Cabides Madeira Just Home Collection', 'price': None, 'url': None, 'productId': '555754'}
+09/05/2025 13:14:10 - INFO - Página 16: Adicionados 28 produtos (Total: 430)
+09/05/2025 13:14:11 - INFO - 
+==================================================
+Processando página 17
+URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=17
+==================================================
+09/05/2025 13:14:11 - DEBUG - Request URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=17
+09/05/2025 13:14:11 - DEBUG - Starting new HTTPS connection (1): www.sodimac.com.br:443
+09/05/2025 13:14:12 - DEBUG - https://www.sodimac.com.br:443 "GET /sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=17 HTTP/11" 302 None
+09/05/2025 13:14:12 - DEBUG - https://www.sodimac.com.br:443 "GET /sodimac-br/category/cat620009/organiza%C3%A7ao/ HTTP/11" 200 None
+09/05/2025 13:14:12 - DEBUG - Response status: 200
+09/05/2025 13:14:12 - DEBUG - Response size: 934106 bytes
+09/05/2025 13:14:12 - DEBUG - Final URL after redirects: https://www.sodimac.com.br/sodimac-br/category/cat620009/organiza%C3%A7ao/
+09/05/2025 13:14:13 - DEBUG - Tamanho do script content: 187162 chars
+09/05/2025 13:14:13 - DEBUG - Estrutura JSON básica válida. Keys principais: ['props', 'page', 'query', 'buildId', 'assetPrefix', 'runtimeConfig', 'isFallback', 'customServer', 'gip', 'appGip', 'head']
+09/05/2025 13:14:13 - DEBUG - Iniciando extração de produtos do JSON
+09/05/2025 13:14:13 - DEBUG - Estrutura searchData encontrada. Keys: ['results', 'sponsoredBanners', 'selectedFacets', 'facets', 'pagination', 'sortOptions', 'autocorrections', 'viewOptions', 'endPoints', 'banners', 'queryId', 'smartBanner']
+09/05/2025 13:14:13 - DEBUG - Quantidade de produtos encontrados: 28
+09/05/2025 13:14:13 - DEBUG - Exemplo de produto (primeiro item): {'displayName': 'Conjunto 8 Cabides Madeira Just Home Collection', 'price': None, 'url': None, 'productId': '555754'}
+09/05/2025 13:14:13 - INFO - Página 17: Adicionados 28 produtos (Total: 458)
+09/05/2025 13:14:14 - INFO - 
+==================================================
+Processando página 18
+URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=18
+==================================================
+09/05/2025 13:14:14 - DEBUG - Request URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=18
+09/05/2025 13:14:14 - DEBUG - Starting new HTTPS connection (1): www.sodimac.com.br:443
+09/05/2025 13:14:14 - DEBUG - https://www.sodimac.com.br:443 "GET /sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=18 HTTP/11" 302 None
+09/05/2025 13:14:14 - DEBUG - https://www.sodimac.com.br:443 "GET /sodimac-br/category/cat620009/organiza%C3%A7ao/ HTTP/11" 200 None
+09/05/2025 13:14:14 - DEBUG - Response status: 200
+09/05/2025 13:14:14 - DEBUG - Response size: 934106 bytes
+09/05/2025 13:14:14 - DEBUG - Final URL after redirects: https://www.sodimac.com.br/sodimac-br/category/cat620009/organiza%C3%A7ao/
+09/05/2025 13:14:15 - DEBUG - Tamanho do script content: 187162 chars
+09/05/2025 13:14:15 - DEBUG - Estrutura JSON básica válida. Keys principais: ['props', 'page', 'query', 'buildId', 'assetPrefix', 'runtimeConfig', 'isFallback', 'customServer', 'gip', 'appGip', 'head']
+09/05/2025 13:14:15 - DEBUG - Iniciando extração de produtos do JSON
+09/05/2025 13:14:15 - DEBUG - Estrutura searchData encontrada. Keys: ['results', 'sponsoredBanners', 'selectedFacets', 'facets', 'pagination', 'sortOptions', 'autocorrections', 'viewOptions', 'endPoints', 'banners', 'queryId', 'smartBanner']
+09/05/2025 13:14:15 - DEBUG - Quantidade de produtos encontrados: 28
+09/05/2025 13:14:15 - DEBUG - Exemplo de produto (primeiro item): {'displayName': 'Conjunto 8 Cabides Madeira Just Home Collection', 'price': None, 'url': None, 'productId': '555754'}
+09/05/2025 13:14:15 - INFO - Página 18: Adicionados 28 produtos (Total: 486)
+09/05/2025 13:14:16 - INFO - 
+==================================================
+Processando página 19
+URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=19
+==================================================
+09/05/2025 13:14:16 - DEBUG - Request URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=19
+09/05/2025 13:14:16 - DEBUG - Starting new HTTPS connection (1): www.sodimac.com.br:443
+09/05/2025 13:14:16 - DEBUG - https://www.sodimac.com.br:443 "GET /sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=19 HTTP/11" 302 None
+09/05/2025 13:14:16 - DEBUG - https://www.sodimac.com.br:443 "GET /sodimac-br/category/cat620009/organiza%C3%A7ao/ HTTP/11" 200 None
+09/05/2025 13:14:16 - DEBUG - Response status: 200
+09/05/2025 13:14:16 - DEBUG - Response size: 934106 bytes
+09/05/2025 13:14:16 - DEBUG - Final URL after redirects: https://www.sodimac.com.br/sodimac-br/category/cat620009/organiza%C3%A7ao/
+09/05/2025 13:14:17 - DEBUG - Tamanho do script content: 187162 chars
+09/05/2025 13:14:17 - DEBUG - Estrutura JSON básica válida. Keys principais: ['props', 'page', 'query', 'buildId', 'assetPrefix', 'runtimeConfig', 'isFallback', 'customServer', 'gip', 'appGip', 'head']
+09/05/2025 13:14:17 - DEBUG - Iniciando extração de produtos do JSON
+09/05/2025 13:14:17 - DEBUG - Estrutura searchData encontrada. Keys: ['results', 'sponsoredBanners', 'selectedFacets', 'facets', 'pagination', 'sortOptions', 'autocorrections', 'viewOptions', 'endPoints', 'banners', 'queryId', 'smartBanner']
+09/05/2025 13:14:17 - DEBUG - Quantidade de produtos encontrados: 28
+09/05/2025 13:14:17 - DEBUG - Exemplo de produto (primeiro item): {'displayName': 'Conjunto 8 Cabides Madeira Just Home Collection', 'price': None, 'url': None, 'productId': '555754'}
+09/05/2025 13:14:17 - INFO - Página 19: Adicionados 28 produtos (Total: 514)
+09/05/2025 13:14:18 - INFO - 
+==================================================
+Processando página 20
+URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=20
+==================================================
+09/05/2025 13:14:18 - DEBUG - Request URL: https://www.sodimac.com.br/sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=20
+09/05/2025 13:14:18 - DEBUG - Starting new HTTPS connection (1): www.sodimac.com.br:443
+09/05/2025 13:14:19 - DEBUG - https://www.sodimac.com.br:443 "GET /sodimac-br/category/cat170549/prateleiras-e-modulos?currentpage=20 HTTP/11" 302 None
+09/05/2025 13:14:19 - DEBUG - https://www.sodimac.com.br:443 "GET /sodimac-br/category/cat620009/organiza%C3%A7ao/ HTTP/11" 200 None
+09/05/2025 13:14:19 - DEBUG - Response status: 200
+09/05/2025 13:14:19 - DEBUG - Response size: 934106 bytes
+09/05/2025 13:14:19 - DEBUG - Final URL after redirects: https://www.sodimac.com.br/sodimac-br/category/cat620009/organiza%C3%A7ao/
+09/05/2025 13:14:20 - DEBUG - Tamanho do script content: 187162 chars
+09/05/2025 13:14:20 - DEBUG - Estrutura JSON básica válida. Keys principais: ['props', 'page', 'query', 'buildId', 'assetPrefix', 'runtimeConfig', 'isFallback', 'customServer', 'gip', 'appGip', 'head']
+09/05/2025 13:14:20 - DEBUG - Iniciando extração de produtos do JSON
+09/05/2025 13:14:20 - DEBUG - Estrutura searchData encontrada. Keys: ['results', 'sponsoredBanners', 'selectedFacets', 'facets', 'pagination', 'sortOptions', 'autocorrections', 'viewOptions', 'endPoints', 'banners', 'queryId', 'smartBanner']
+09/05/2025 13:14:20 - DEBUG - Quantidade de produtos encontrados: 28
+09/05/2025 13:14:20 - DEBUG - Exemplo de produto (primeiro item): {'displayName': 'Conjunto 8 Cabides Madeira Just Home Collection', 'price': None, 'url': None, 'productId': '555754'}
+09/05/2025 13:14:20 - INFO - Página 20: Adicionados 28 produtos (Total: 542)
+09/05/2025 13:14:21 - INFO - Salvo 542 produtos em 'produtos_sodimac.csv'
+09/05/2025 13:14:21 - INFO - Coleta concluída com sucesso! Total: 542 produtos
+09/05/2025 13:14:21 - INFO - Execução finalizada
