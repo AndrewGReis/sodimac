@@ -1,0 +1,9 @@
+2025-05-12 11:06:50,647 - INFO - Acessando URL: https://www.sodimac.com.br/sodimac-br/category/cat70064/Cadeira-e-Poltrona-para-Area-Externa?q=%3Arelevance&page=1
+2025-05-12 11:06:50,647 - DEBUG - Starting new HTTPS connection (1): www.sodimac.com.br:443
+2025-05-12 11:06:51,147 - DEBUG - https://www.sodimac.com.br:443 "GET /sodimac-br/category/cat70064/Cadeira-e-Poltrona-para-Area-Externa?q=%3Arelevance&page=1 HTTP/11" 302 None
+2025-05-12 11:06:53,412 - DEBUG - https://www.sodimac.com.br:443 "GET /sodimac-br/no-search-result?Ntt= HTTP/11" 200 None
+2025-05-12 11:06:53,868 - INFO - JSON __NEXT_DATA__ extraído com sucesso
+2025-05-12 11:06:53,868 - DEBUG - Iniciando análise dos dados dos produtos
+2025-05-12 11:06:53,882 - ERROR - Estrutura de dados inesperada - chave não encontrada: 'searchProps'
+2025-05-12 11:06:53,882 - DEBUG - Produtos processados com sucesso: 0
+2025-05-12 11:06:53,882 - WARNING - Nenhum produto foi extraído. CSV não será gerado.

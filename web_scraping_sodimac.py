@@ -3,6 +3,7 @@ import json
 import time
 import logging
 import csv
+import re
 from bs4 import BeautifulSoup
 
 def configure_logging():
@@ -21,7 +22,7 @@ def configure_logging():
     
     class TerminalFilter(logging.Filter):
         def filter(self, record):
-            return any(msg in record.getMessage() for msg in [
+            return record.levelno >= logging.INFO and any(msg in record.getMessage() for msg in [
                 "Iniciando coleta", "Salvo ", "Coleta concluída", 
                 "Execução finalizada", "Erro durante", "interrompida"
             ])
@@ -29,6 +30,7 @@ def configure_logging():
     stream_handler = logging.StreamHandler()
     stream_handler.setFormatter(formatter)
     stream_handler.addFilter(TerminalFilter())
+    stream_handler.setLevel(logging.INFO)
     logger.addHandler(stream_handler)
     
     logging.getLogger("requests").setLevel(logging.WARNING)
@@ -53,13 +55,13 @@ def fetch_page_content(url):
         logging.debug(f"Resposta recebida - Status: {response.status_code}, Tamanho: {len(response.text)} bytes")
         return response.text
     except Exception as e:
-        logging.error(f"Erro ao obter página: {str(e)}")
+        logging.error(f"Erro ao obter pagina: {str(e)}")
         return None
 
 def extract_json_from_page(html_content):
     """Extrai dados JSON do conteúdo HTML da página"""
     if not html_content:
-        logging.debug("Conteúdo HTML vazio recebido para extração JSON")
+        logging.debug("Conteudo HTML vazio recebido para extracao JSON")
         return None
     
     try:
@@ -67,7 +69,7 @@ def extract_json_from_page(html_content):
         script_tag = soup.select_one('script#__NEXT_DATA__')
         
         if not script_tag:
-            logging.warning("Script __NEXT_DATA__ não encontrado na página")
+            logging.warning("Script __NEXT_DATA__ nao encontrado na pagina")
             return None
             
         logging.debug("Script __NEXT_DATA__ encontrado, extraindo dados JSON")
@@ -76,14 +78,29 @@ def extract_json_from_page(html_content):
         logging.error(f"Erro ao extrair JSON: {str(e)}")
         return None
 
-def parse_product_data(json_data):
+def extract_price_from_html(html_content):
+    """Extrai preços diretamente do HTML usando regex como fallback"""
+    try:
+        price_pattern = re.compile(r'R\$\s*[\d\.]+,\d{2}')
+        matches = price_pattern.findall(html_content)
+        
+        if matches:
+            logging.debug(f"Preco extraído via regex: {matches[0]}")
+            return matches[0]
+        
+        return "N/A"
+    except Exception as e:
+        logging.warning(f"Falha ao extrair preço via regex: {str(e)}")
+        return "N/A"
+
+def parse_product_data(json_data, html_content=None):
     """Analisa os dados JSON e extrai informações dos produtos"""
     products = []
     if not json_data:
         return products
         
     try:
-        logging.debug("Iniciando análise dos dados dos produtos")
+        logging.debug("Iniciando analise dos dados dos produtos")
         search_data = json_data['props']['pageProps']['searchProps']['searchData']
         product_list = search_data.get('results', [])
         logging.debug(f"Encontrados {len(product_list)} produtos para processar")
@@ -91,20 +108,35 @@ def parse_product_data(json_data):
         for product in product_list:
             try:
                 price_info = product.get('price', {})
+                
+                current_price = price_info.get('formattedValue', 'N/A')
+                original_price = price_info.get('originalFormattedValue', current_price)
+                
+                if current_price == 'N/A' and 'sellingPrice' in price_info:
+                    current_price = price_info.get('sellingPrice', {}).get('formattedValue', 'N/A')
+                
+                if current_price == 'N/A' and html_content:
+                    current_price = extract_price_from_html(html_content)
+                    logging.debug(f"Preco extraido via HTML para SKU {product.get('productId', '?')}")
+                
                 products.append({
                     'Nome': product.get('displayName', 'N/A'),
-                    'Preco': price_info.get('formattedValue', 'N/A'),
-                    'Preco_Original': price_info.get('originalFormattedValue', price_info.get('formattedValue', 'N/A')),
+                    'Preco': current_price,
+                    'Preco_Original': original_price,
                     'Desconto': product.get('discountText', 'N/A'),
                     'URL': f"https://www.sodimac.com.br{product.get('url', '')}",
                     'SKU': product.get('productId', 'N/A'),
                     'Disponibilidade': product.get('stock', {}).get('status', 'N/A')
                 })
+                
+                if 'sellingPrice' in price_info or (html_content and current_price != 'N/A'):
+                    logging.debug(f"Estrutura de preco diferente para {product.get('productId')}")
+                    
             except Exception as e:
-                logging.warning(f"Erro ao processar produto: {str(e)}")
+                logging.warning(f"Erro ao processar produto {product.get('productId', '?')}: {str(e)}")
                 continue
     except KeyError as e:
-        logging.error(f"Estrutura de dados inesperada - chave não encontrada: {str(e)}")
+        logging.error(f"Estrutura de dados inesperada - chave nao encontrada: {str(e)}")
     except Exception as e:
         logging.error(f"Erro inesperado ao analisar produtos: {str(e)}")
     
@@ -140,28 +172,28 @@ def scrape_category_products(base_url, max_pages=MAX_PAGES):
     
     for page in range(1, max_pages + 1):
         page_url = f"{base_url}?currentpage={page}"
-        logging.debug(f"Processando página {page} - URL: {page_url}")
+        logging.debug(f"Processando pagina {page} - URL: {page_url}")
         
         html_content = fetch_page_content(page_url)
         
         if not html_content:
-            logging.warning(f"Falha ao obter página {page}")
+            logging.warning(f"Falha ao obter pagina {page}")
             break
             
         json_data = extract_json_from_page(html_content)
         
         if not json_data:
-            logging.warning(f"Dados inválidos na página {page}")
+            logging.warning(f"Dados invalidos na pagina {page}")
             break
             
-        products = parse_product_data(json_data)
+        products = parse_product_data(json_data, html_content)
         
         if not products:
-            logging.info(f"Nenhum produto encontrado na página {page}")
+            logging.info(f"Nenhum produto encontrado na pagina {page}")
             break
             
         all_products.extend(products)
-        logging.debug(f"Página {page} processada - Total acumulado: {len(all_products)} produtos")
+        logging.debug(f"Pagina {page} processada - Total acumulado: {len(all_products)} produtos")
         time.sleep(REQUEST_DELAY)
     
     logging.info(f"Coleta finalizada - Total de produtos: {len(all_products)}")
@@ -178,17 +210,17 @@ def main():
         
         if products:
             if save_products_to_csv(products):
-                logging.info(f"Coleta concluída com sucesso! Total: {len(products)} produtos")
+                logging.info(f"Coleta concluida com sucesso! Total: {len(products)} produtos")
                 print(f"Coleta concluída com sucesso! Total: {len(products)} produtos")
         else:
             logging.warning("Nenhum produto foi coletado")
             print("Nenhum produto foi coletado")
             
     except KeyboardInterrupt:
-        logging.warning("Execução interrompida pelo usuário")
+        logging.warning("Execucao interrompida pelo usuario")
         print("\nExecução interrompida pelo usuário")
     except Exception as e:
-        logging.error(f"Erro durante a execução: {str(e)}", exc_info=True)
+        logging.error(f"Erro durante a execucao: {str(e)}", exc_info=True)
         print(f"\nErro durante a execução: {str(e)}")
     finally:
         logging.info("==== Programa finalizado ====")
