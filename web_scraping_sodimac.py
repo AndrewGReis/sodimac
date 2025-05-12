@@ -7,13 +7,12 @@ import re
 from bs4 import BeautifulSoup
 
 def configure_logging():
-    """Configura o sistema de logging para arquivo e terminal"""
     logging.getLogger().handlers = []
     
     logger = logging.getLogger()
     logger.setLevel(logging.DEBUG)
     
-    formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s', datefmt='%d/%m/%Y %H:%M:%S')
+    formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(funcName)s - %(message)s', datefmt='%d/%m/%Y %H:%M:%S')
     
     file_handler = logging.FileHandler('sodimac_scraping.log', mode='a', encoding='utf-8')
     file_handler.setFormatter(formatter)
@@ -46,7 +45,6 @@ MAX_PAGES = 20
 REQUEST_DELAY = 1
 
 def fetch_page_content(url):
-    """Obtém o conteúdo HTML de uma URL"""
     try:
         logging.debug(f"Requisitando URL: {url}")
         session = requests.Session()
@@ -144,7 +142,6 @@ def parse_product_data(json_data, html_content=None):
     return products
 
 def save_products_to_csv(products, filename='produtos_sodimac.csv'):
-    """Salva a lista de produtos em um arquivo CSV"""
     try:
         if not products:
             logging.warning("Nenhum produto para salvar no CSV")
@@ -200,7 +197,6 @@ def scrape_category_products(base_url, max_pages=MAX_PAGES):
     return all_products
 
 def main():
-    """Função principal de execução"""
     configure_logging()
     logging.info("==== Iniciando programa de coleta ====")
     
