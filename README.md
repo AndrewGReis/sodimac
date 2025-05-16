@@ -19,7 +19,6 @@ Automação para coleta de preços e disponibilidade de produtos na categoria "P
 
 ## 📊 Saída Gerada
 Arquivo `produtos_sodimac.csv` com estrutura:
-```plaintext
 Nome | Preco | Preco_Original | Desconto | URL | SKU | Disponibilidade
 
 ## 🏆 Destaques Técnicos
